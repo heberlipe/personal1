@@ -64,3 +64,10 @@
     margin: 0 0 30px;
   }
 }
+
+@media (max-width: 767px) {
+  #empanadas .portfolio-item {
+    width: 47.5%;
+    display: inline-block;
+  }
+}
