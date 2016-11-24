@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Principal} from './HelloWorld';
+import {Nav,Header} from './HelloWorld';
 
-ReactDOM.render(<Principal name="Diego" />, document.getElementById('root'));
+ReactDOM.render(<Nav/>, document.getElementById('mainNav'));
+ReactDOM.render(<Header/>, document.getElementById('header-section'));
