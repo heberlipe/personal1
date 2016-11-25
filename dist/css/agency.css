@@ -203,6 +203,9 @@ fieldset[disabled] .btn-xl.active {
   background-color: #fec503;
 }
 @media (min-width: 768px) {
+  .page-scroll{
+    cursor: pointer;
+  }
   .navbar-custom {
     background-color: transparent;
     padding: 25px 0;

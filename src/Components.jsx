@@ -1,47 +1,91 @@
-import React from 'react';
+import React,{Component} from 'react';
 import {Affix} from './affix.jsx';
+import Scroll from 'react-scroll';
 
-export const Nav = () => {
-  const offset = 51;
-  return(
-    <Affix
-      id="mainNav"
-      className="navbar navbar-default navbar-fixed-top navbar-custom"
-      offset={offset}
-      >
-      <div className="container">
-          <div className="navbar-header page-scroll">
-              <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                  <span className="sr-only">Toggle navigation</span> Menu <i className="fa fa-bars"></i>
-              </button>
-              <a className="navbar-brand page-scroll" href="#page-top">Titulo</a>
-          </div>
+var Link       = Scroll.Link;
+var DirectLink = Scroll.DirectLink;
+var Element    = Scroll.Element;
+var Events     = Scroll.Events;
+var scroll     = Scroll.animateScroll;
+var scrollSpy  = Scroll.scrollSpy;
 
-          <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul className="nav navbar-nav navbar-right">
-                  <li className="hidden">
-                      <a href="#page-top"></a>
-                  </li>
-                  <li>
-                      <a className="page-scroll" href="#nosotros">Nosotros</a>
-                  </li>
-                  <li>
-                      <a className="page-scroll" href="#pizzas">Nuestras Pizzas</a>
-                  </li>
-                  <li>
-                      <a className="page-scroll" href="#empanadas">Nuestras Empanadas</a>
-                  </li>
-                  <li>
-                      <a className="page-scroll" href="#team">Equipo</a>
-                  </li>
-                  <li>
-                      <a className="page-scroll" href="#contact">Contacto</a>
-                  </li>
-              </ul>
-          </div>
-      </div>
-    </Affix>
-  );
+export class Nav extends Component{
+
+
+
+  compomentDidMount(){
+    Events.scrollEvent.register('begin', () => {
+      console.log("begin", arguments);
+    });
+    Events.scrollEvent.register('end', () => {
+      console.log("end", arguments);
+    });
+
+    scrollSpy.update();
+  }
+
+  scrollToTop(){
+    scroll.scrollToTop();
+  };
+
+  durationFn(deltaTop){
+    return deltaTop;
+  };
+
+  componentWillUnmount(){
+    Events.scrollEvent.remove('begin');
+    Events.scrollEvent.remove('end');
+  };
+
+  render(){
+    const offset = 51;
+    return(
+      <Affix
+        id="mainNav"
+        className="navbar navbar-default navbar-fixed-top navbar-custom"
+        offset={offset}
+        >
+        <div className="container">
+            <div className="navbar-header page-scroll">
+                <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span className="sr-only">Toggle navigation</span> Menu <i className="fa fa-bars"></i>
+                </button>
+                <Link
+                  activeClass="active"
+                  className="navbar-brand page-scroll"
+                  to="page-top"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                >Titulo</Link>
+            </div>
+
+            <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul className="nav navbar-nav navbar-right">
+                    <li className="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a className="page-scroll" href="#nosotros">Nosotros</a>
+                    </li>
+                    <li>
+                        <a className="page-scroll" href="#pizzas">Nuestras Pizzas</a>
+                    </li>
+                    <li>
+                        <a className="page-scroll" href="#empanadas">Nuestras Empanadas</a>
+                    </li>
+                    <li>
+                        <a className="page-scroll" href="#team">Equipo</a>
+                    </li>
+                    <li>
+                        <a className="page-scroll" href="#contact">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </Affix>
+    );
+  }
 }
 
 export const Header = () => {

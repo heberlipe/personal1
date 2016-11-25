@@ -14,7 +14,7 @@ import {
 export class Principal extends Component{
   render(){
     return(
-        <div  id="page-top" className="index">
+        <div  id="page-top" name="page-top" className="index">
           <Nav/>
           <Header/>
           <Nosotros/>
