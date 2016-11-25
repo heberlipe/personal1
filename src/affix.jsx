@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
-class Affix extends Component {
+export class Affix extends Component {
 
   static propTypes = {
     offset: PropTypes.number,
@@ -54,5 +54,3 @@ class Affix extends Component {
     );
   }
 }
-
-export default Affix;

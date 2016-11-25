@@ -1,8 +1,14 @@
 import React from 'react';
+import {Affix} from './affix.jsx';
 
 export const Nav = () => {
+  const offset = 51;
   return(
-    <nav id="mainNav" className="navbar navbar-default navbar-custom navbar-fixed-top">
+    <Affix
+      id="mainNav"
+      className="navbar navbar-default navbar-fixed-top navbar-custom"
+      offset={offset}
+      >
       <div className="container">
           <div className="navbar-header page-scroll">
               <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -34,7 +40,7 @@ export const Nav = () => {
               </ul>
           </div>
       </div>
-    </nav>
+    </Affix>
   );
 }
 
