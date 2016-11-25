@@ -1,5 +1,15 @@
 import React,{ Component } from 'react';
-import {Nav, Header} from './Components.jsx'
+import {
+  Nav,
+  Header,
+  Nosotros,
+  Pizzas,
+  Empanadas,
+  Team,
+  Contacto,
+  Footer,
+  Modals
+} from './Components.jsx'
 
 export class Principal extends Component{
   render(){
@@ -13,6 +23,7 @@ export class Principal extends Component{
           <Team/>
           <Contacto/>
           <Footer/>
+          <Modals/>
         </div>
     )
   }
