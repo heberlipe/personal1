@@ -54,9 +54,10 @@ export class Nav extends Component{
                   activeClass="active"
                   className="navbar-brand page-scroll"
                   to="page-top"
+                  href="#page-top"
                   spy={true}
                   smooth={true}
-                  duration={500}
+                  duration={2000}
                 >Titulo</Link>
             </div>
 
