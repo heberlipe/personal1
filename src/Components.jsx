@@ -57,7 +57,7 @@ export class Nav extends Component{
                   href="#page-top"
                   spy={true}
                   smooth={true}
-                  duration={1000}
+                  duration={1250}
                 >Titulo</Link>
             </div>
 
@@ -74,7 +74,7 @@ export class Nav extends Component{
                           spy={true}
                           to="nosotros"
                           smooth={true}
-                          duration={1000}
+                          duration={1250}
                         >Nosotros</Link>
                     </li>
                     <li>
@@ -85,7 +85,7 @@ export class Nav extends Component{
                           spy={true}
                           to="pizzas"
                           smooth={true}
-                          duration={1000}
+                          duration={1250}
                           >Nuestras Pizzas</Link>
                     </li>
                     <li>
@@ -96,7 +96,7 @@ export class Nav extends Component{
                           spy={true}
                           to="empanadas"
                           smooth={true}
-                          duration={1000}
+                          duration={1250}
                           >Nuestras Empanadas</Link>
                     </li>
                     <li>
@@ -107,7 +107,7 @@ export class Nav extends Component{
                           spy={true}
                           to="team"
                           smooth={true}
-                          duration={1000}
+                          duration={1250}
                         >Equipo</Link>
                     </li>
                     <li>
@@ -118,7 +118,7 @@ export class Nav extends Component{
                           spy={true}
                           to="contact"
                           smooth={true}
-                          duration={1000}
+                          duration={1250}
                         >Contacto</Link>
                     </li>
                 </ul>
@@ -136,7 +136,15 @@ export const Header = () => {
           <div className="intro-text">
               <div className="intro-lead-in">Bienvenidos</div>
               <div className="intro-heading">Alta pagina :D</div>
-              <a href="#nosotros" className="page-scroll btn btn-xl">Delivery</a>
+              <Link
+                href="#nosotros"
+                className="page-scroll btn btn-xl"
+                activeClass="active"
+                spy={true}
+                to="nosotros"
+                smooth={true}
+                duration={1250}
+              >Delivery</Link>
           </div>
       </div>
     </header>
@@ -632,7 +640,7 @@ export const Modals = () => {
                                   <img className="img-responsive img-centered" src="img/portfolio/roundicons-free.png" alt=""/>
                                   <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                   <p>
-                                      <strong>Want these icons in this portfolio item sample?</strong>You can download 60 of them for free, courtesy of <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">RoundIcons.com</a>, or you can purchase the 1500 icon set <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">here</a>.</p>
+                                      <strong>Want these icons in this portfolio item sample?</strong>You can download 60 of them for free, courtesy of <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">RoundIcons.com</a>, or you can purchase the 1a500 icon set <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">here</a>.</p>
                                   <ul className="list-inline">
                                       <li>Date: July 2014</li>
                                       <li>Client: Round Icons</li>
