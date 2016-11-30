@@ -57,7 +57,7 @@ export class Nav extends Component{
                   href="#page-top"
                   spy={true}
                   smooth={true}
-                  duration={2000}
+                  duration={1000}
                 >Titulo</Link>
             </div>
 
@@ -67,19 +67,59 @@ export class Nav extends Component{
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a className="page-scroll" href="#nosotros">Nosotros</a>
+                        <Link
+                          className="page-scroll"
+                          href="#nosotros"
+                          activeClass="active"
+                          spy={true}
+                          to="nosotros"
+                          smooth={true}
+                          duration={1000}
+                        >Nosotros</Link>
                     </li>
                     <li>
-                        <a className="page-scroll" href="#pizzas">Nuestras Pizzas</a>
+                        <Link
+                          className="page-scroll"
+                          href="#pizzas"
+                          activeClass="active"
+                          spy={true}
+                          to="pizzas"
+                          smooth={true}
+                          duration={1000}
+                          >Nuestras Pizzas</Link>
                     </li>
                     <li>
-                        <a className="page-scroll" href="#empanadas">Nuestras Empanadas</a>
+                        <Link
+                          className="page-scroll"
+                          href="#empanadas"
+                          activeClass="active"
+                          spy={true}
+                          to="empanadas"
+                          smooth={true}
+                          duration={1000}
+                          >Nuestras Empanadas</Link>
                     </li>
                     <li>
-                        <a className="page-scroll" href="#team">Equipo</a>
+                        <Link
+                          className="page-scroll"
+                          href="#team"
+                          activeClass="active"
+                          spy={true}
+                          to="team"
+                          smooth={true}
+                          duration={1000}
+                        >Equipo</Link>
                     </li>
                     <li>
-                        <a className="page-scroll" href="#contact">Contacto</a>
+                        <Link
+                          className="page-scroll"
+                          href="#contact"
+                          activeClass="active"
+                          spy={true}
+                          to="contact"
+                          smooth={true}
+                          duration={1000}
+                        >Contacto</Link>
                     </li>
                 </ul>
             </div>
@@ -105,7 +145,7 @@ export const Header = () => {
 
 export const Nosotros = () => {
   return(
-    <section id="nosotros">
+    <section id="nosotros" name="nosotros">
         <div className="container">
             <div className="row">
                 <div className="col-lg-12 text-center">
@@ -146,7 +186,7 @@ export const Nosotros = () => {
 
 export const Pizzas = () => {
   return(
-    <section id="pizzas" className="bg-light-gray">
+    <section id="pizzas" name="pizzas" className="bg-light-gray">
         <div className="container">
             <div className="row">
                 <div className="col-lg-12 text-center">
@@ -334,7 +374,7 @@ export const Pizzas = () => {
 
 export const Empanadas = () => {
   return(
-    <section id="empanadas">
+    <section id="empanadas" name="empanadas">
         <div className="container">
             <div className="row">
                 <div className="col-lg-12 text-center">
@@ -477,7 +517,7 @@ export const Empanadas = () => {
 
 export const Team = () => {
   return(
-    <section id="team" className="bg-light-gray">
+    <section id="team" name="team" className="bg-light-gray">
         <div className="container">
             <div className="row">
                 <div className="col-lg-12 text-center">
@@ -520,7 +560,7 @@ export const Team = () => {
 
 export const Contacto = () => {
   return(
-    <section id="contact">
+    <section id="contact" name="contact">
         <div className="container">
             <div className="row">
                 <div className="col-lg-12 text-center">
@@ -574,7 +614,7 @@ export const Footer = () => {
 export const Modals = () => {
   return(
     <div>
-      <div className="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+      <div className="portfolio-modal modal fade" id="portfolioModal1" tabIndex="-1" role="dialog" aria-hidden="true">
           <div className="modal-dialog">
               <div className="modal-content">
                   <div className="close-modal" data-dismiss="modal">
@@ -607,7 +647,7 @@ export const Modals = () => {
           </div>
       </div>
 
-      <div className="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+      <div className="portfolio-modal modal fade" id="portfolioModal2" tabIndex="-1" role="dialog" aria-hidden="true">
           <div className="modal-dialog">
               <div className="modal-content">
                   <div className="close-modal" data-dismiss="modal">
@@ -634,7 +674,7 @@ export const Modals = () => {
           </div>
       </div>
 
-      <div className="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+      <div className="portfolio-modal modal fade" id="portfolioModal3" tabIndex="-1" role="dialog" aria-hidden="true">
           <div className="modal-dialog">
               <div className="modal-content">
                   <div className="close-modal" data-dismiss="modal">
@@ -661,7 +701,7 @@ export const Modals = () => {
           </div>
       </div>
 
-      <div className="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+      <div className="portfolio-modal modal fade" id="portfolioModal4" tabIndex="-1" role="dialog" aria-hidden="true">
           <div className="modal-dialog">
               <div className="modal-content">
                   <div className="close-modal" data-dismiss="modal">
@@ -689,7 +729,7 @@ export const Modals = () => {
       </div>
 
 
-      <div className="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+      <div className="portfolio-modal modal fade" id="portfolioModal5" tabIndex="-1" role="dialog" aria-hidden="true">
           <div className="modal-dialog">
               <div className="modal-content">
                   <div className="close-modal" data-dismiss="modal">
@@ -716,7 +756,7 @@ export const Modals = () => {
           </div>
       </div>
 
-      <div className="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+      <div className="portfolio-modal modal fade" id="portfolioModal6" tabIndex="-1" role="dialog" aria-hidden="true">
           <div className="modal-dialog">
               <div className="modal-content">
                   <div className="close-modal" data-dismiss="modal">
