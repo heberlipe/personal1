@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import {Item} from "./SubComponents"
 import {Affix} from './affix.jsx';
 import Scroll from 'react-scroll';
 
@@ -202,178 +203,150 @@ export const Pizzas = () => {
                     <h3 className="section-subheading text-muted">Tenemos los mejores ingredientes para las mejores pizzas</h3>
                 </div>
             </div>
+
             <div className="row">
-              <div className="col-md-2 col-sm-2 portfolio-item">
-                  <a href="#portfolioModal1" className="portfolio-link" data-toggle="modal">
-                      <div className="portfolio-hover">
-                          <div className="portfolio-hover-content">
-                              <i className="fa fa-plus fa-3x"></i>
-                          </div>
-                      </div>
-                      <img src="img/portfolio/roundicons.png" className="img-responsive" alt=""/>
-                  </a>
-                  <div className="portfolio-caption">
-                      <h4>Pizza 1</h4>
-                      <p className="text-muted">Pizza</p>
-                  </div>
-              </div>
-              <div className="col-md-2 col-sm-2 portfolio-item">
-                  <a href="#portfolioModal2" className="portfolio-link" data-toggle="modal">
-                      <div className="portfolio-hover">
-                          <div className="portfolio-hover-content">
-                              <i className="fa fa-plus fa-3x"></i>
-                          </div>
-                      </div>
-                      <img src="img/portfolio/startup-framework.png" className="img-responsive" alt=""/>
-                  </a>
-                  <div className="portfolio-caption">
-                      <h4>Pizza 2</h4>
-                      <p className="text-muted">Pizza</p>
-                  </div>
-              </div>
-              <div className="col-md-2 col-sm-2 portfolio-item">
-                  <a href="#portfolioModal3" className="portfolio-link" data-toggle="modal">
-                      <div className="portfolio-hover">
-                          <div className="portfolio-hover-content">
-                              <i className="fa fa-plus fa-3x"></i>
-                          </div>
-                      </div>
-                      <img src="img/portfolio/treehouse.png" className="img-responsive" alt=""/>
-                  </a>
-                  <div className="portfolio-caption">
-                      <h4>Pizza 3</h4>
-                      <p className="text-muted">Pizza </p>
-                  </div>
-              </div>
-              <div className="col-md-2 col-sm-2 portfolio-item">
-                  <a href="#portfolioModal4" className="portfolio-link" data-toggle="modal">
-                      <div className="portfolio-hover">
-                          <div className="portfolio-hover-content">
-                              <i className="fa fa-plus fa-3x"></i>
-                          </div>
-                      </div>
-                      <img src="img/portfolio/golden.png" className="img-responsive" alt=""/>
-                  </a>
-                  <div className="portfolio-caption">
-                      <h4>Pizza 4</h4>
-                      <p className="text-muted">Pizza</p>
-                  </div>
-              </div>
-              <div className="col-md-2 col-sm-2 portfolio-item">
-                  <a href="#portfolioModal5" className="portfolio-link" data-toggle="modal">
-                      <div className="portfolio-hover">
-                          <div className="portfolio-hover-content">
-                              <i className="fa fa-plus fa-3x"></i>
-                          </div>
-                      </div>
-                      <img src="img/portfolio/escape.png" className="img-responsive" alt=""/>
-                  </a>
-                  <div className="portfolio-caption">
-                      <h4>Pizza 5</h4>
-                      <p className="text-muted">Pizza</p>
-                  </div>
-              </div>
-              <div className="col-md-2 col-sm-2 portfolio-item">
-                  <a href="#portfolioModal6" className="portfolio-link" data-toggle="modal">
-                      <div className="portfolio-hover">
-                          <div className="portfolio-hover-content">
-                              <i className="fa fa-plus fa-3x"></i>
-                          </div>
-                      </div>
-                      <img src="img/portfolio/dreams.png" className="img-responsive" alt=""/>
-                  </a>
-                  <div className="portfolio-caption">
-                      <h4>Pizza 6</h4>
-                      <p className="text-muted">Pizza</p>
-                  </div>
-              </div>
+              <Item
+                title="Roundicons"
+                modal="#portfolioModal1"
+                subtitle="asdasd"
+              />
+              <Item
+                title="Roundicons"
+                modal="#portfolioModal1"
+                subtitle="asdasd"
+              />
+              <Item
+                title="Roundicons"
+                modal="#portfolioModal1"
+                subtitle="asdasd"
+              />
+              <Item
+                title="Roundicons"
+                modal="#portfolioModal1"
+                subtitle="asdasd"
+              />
+              <Item
+                title="Roundicons"
+                modal="#portfolioModal1"
+                subtitle="asdasd"
+              />
+              <Item
+                title="Roundicons"
+                modal="#portfolioModal1"
+                subtitle="asdasd"
+              />
             </div>
 
             <div className="row">
-              <div className="col-md-2 col-sm-2 portfolio-item">
-                  <a href="#portfolioModal1" className="portfolio-link" data-toggle="modal">
-                      <div className="portfolio-hover">
-                          <div className="portfolio-hover-content">
-                              <i className="fa fa-plus fa-3x"></i>
-                          </div>
-                      </div>
-                      <img src="img/portfolio/roundicons.png" className="img-responsive" alt=""/>
-                  </a>
-                  <div className="portfolio-caption">
-                      <h4>Pizza 7</h4>
-                      <p className="text-muted">Pizza</p>
-                  </div>
-              </div>
-              <div className="col-md-2 col-sm-2 portfolio-item">
-                  <a href="#portfolioModal2" className="portfolio-link" data-toggle="modal">
-                      <div className="portfolio-hover">
-                          <div className="portfolio-hover-content">
-                              <i className="fa fa-plus fa-3x"></i>
-                          </div>
-                      </div>
-                      <img src="img/portfolio/startup-framework.png" className="img-responsive" alt=""/>
-                  </a>
-                  <div className="portfolio-caption">
-                      <h4>Pizza 8</h4>
-                      <p className="text-muted">Pizza</p>
-                  </div>
-              </div>
-              <div className="col-md-2 col-sm-2 portfolio-item">
-                  <a href="#portfolioModal3" className="portfolio-link" data-toggle="modal">
-                      <div className="portfolio-hover">
-                          <div className="portfolio-hover-content">
-                              <i className="fa fa-plus fa-3x"></i>
-                          </div>
-                      </div>
-                      <img src="img/portfolio/treehouse.png" className="img-responsive" alt=""/>
-                  </a>
-                  <div className="portfolio-caption">
-                      <h4>Pizza 9</h4>
-                      <p className="text-muted">Pizza</p>
-                  </div>
-              </div>
-              <div className="col-md-2 col-sm-2 portfolio-item">
-                  <a href="#portfolioModal4" className="portfolio-link" data-toggle="modal">
-                      <div className="portfolio-hover">
-                          <div className="portfolio-hover-content">
-                              <i className="fa fa-plus fa-3x"></i>
-                          </div>
-                      </div>
-                      <img src="img/portfolio/golden.png" className="img-responsive" alt=""/>
-                  </a>
-                  <div className="portfolio-caption">
-                      <h4>Pizza 10</h4>
-                      <p className="text-muted">Pizza</p>
-                  </div>
-              </div>
-              <div className="col-md-2 col-sm-2 portfolio-item">
-                  <a href="#portfolioModal5" className="portfolio-link" data-toggle="modal">
-                      <div className="portfolio-hover">
-                          <div className="portfolio-hover-content">
-                              <i className="fa fa-plus fa-3x"></i>
-                          </div>
-                      </div>
-                      <img src="img/portfolio/escape.png" className="img-responsive" alt=""/>
-                  </a>
-                  <div className="portfolio-caption">
-                      <h4>Pizza 11</h4>
-                      <p className="text-muted">Pizza</p>
-                  </div>
-              </div>
-              <div className="col-md-2 col-sm-2 portfolio-item">
-                  <a href="#portfolioModal6" className="portfolio-link" data-toggle="modal">
-                      <div className="portfolio-hover">
-                          <div className="portfolio-hover-content">
-                              <i className="fa fa-plus fa-3x"></i>
-                          </div>
-                      </div>
-                      <img src="img/portfolio/dreams.png" className="img-responsive" alt=""/>
-                  </a>
-                  <div className="portfolio-caption">
-                      <h4>Pizza 12</h4>
-                      <p className="text-muted">Pizza</p>
-                  </div>
-              </div>
+              <Item
+                title="Roundicons"
+                modal="#portfolioModal1"
+                subtitle="asdasd"
+              />
+              <Item
+                title="Roundicons"
+                modal="#portfolioModal1"
+                subtitle="asdasd"
+              />
+              <Item
+                title="Roundicons"
+                modal="#portfolioModal1"
+                subtitle="asdasd"
+              />
+              <Item
+                title="Roundicons"
+                modal="#portfolioModal1"
+                subtitle="asdasd"
+              />
+              <Item
+                title="Roundicons"
+                modal="#portfolioModal1"
+                subtitle="asdasd"
+              />
+              <Item
+                title="Roundicons"
+                modal="#portfolioModal1"
+                subtitle="asdasd"
+              />
+            </div>
+
+            <div className="row">
+              <Item
+                title="Roundicons"
+                modal="#portfolioModal1"
+                subtitle="asdasd"
+              />
+              <Item
+                title="Roundicons"
+                modal="#portfolioModal1"
+                subtitle="asdasd"
+              />
+              <Item
+                title="Roundicons"
+                modal="#portfolioModal1"
+                subtitle="asdasd"
+              />
+              <Item
+                title="Roundicons"
+                modal="#portfolioModal1"
+                subtitle="asdasd"
+              />
+              <Item
+                title="Roundicons"
+                modal="#portfolioModal1"
+                subtitle="asdasd"
+              />
+              <Item
+                title="Roundicons"
+                modal="#portfolioModal1"
+                subtitle="asdasd"
+              />
+            </div>
+
+            <div className="row">
+              <Item
+                title="Roundicons"
+                modal="#portfolioModal1"
+                subtitle="asdasd"
+              />
+              <Item
+                title="Roundicons"
+                modal="#portfolioModal1"
+                subtitle="asdasd"
+              />
+              <Item
+                title="Roundicons"
+                modal="#portfolioModal1"
+                subtitle="asdasd"
+              />
+              <Item
+                title="Roundicons"
+                modal="#portfolioModal1"
+                subtitle="asdasd"
+              />
+              <Item
+                title="Roundicons"
+                modal="#portfolioModal1"
+                subtitle="asdasd"
+              />
+              <Item
+                title="Roundicons"
+                modal="#portfolioModal1"
+                subtitle="asdasd"
+              />
+            </div>
+
+            <div className="row">
+              <Item
+                title="Roundicons"
+                modal="#portfolioModal1"
+                subtitle="asdasd"
+              />
+              <Item
+                title="Roundicons"
+                modal="#portfolioModal1"
+                subtitle="asdasd"
+              />
             </div>
         </div>
     </section>

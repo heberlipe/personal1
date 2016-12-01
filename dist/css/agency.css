@@ -51,6 +51,17 @@ h6 {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 50px;
 }
+
+.scroll{
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 750px;
+  background-color: #AAAAAA;
+  width: 100%;
+  right:0;
+  left:0;
+}
+
 .img-centered {
   margin: 0 auto;
 }
@@ -202,7 +213,7 @@ fieldset[disabled] .btn-xl.active {
   color: white;
   background-color: #fec503;
 }
-@media (min-width: 768px) {
+@media (min-width: 991px) {
   .page-scroll{
     cursor: pointer;
   }
@@ -224,7 +235,7 @@ fieldset[disabled] .btn-xl.active {
     border-radius: 3px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 991px) {
   .navbar-custom.affix {
     background-color: #222222;
     padding: 10px 0;
@@ -264,7 +275,7 @@ header .intro-text .intro-heading {
   line-height: 50px;
   margin-bottom: 25px;
 }
-@media (min-width: 768px) {
+@media (min-width: 991px) {
   header .intro-text {
     padding-top: 300px;
     padding-bottom: 200px;
@@ -300,7 +311,7 @@ section h3.section-subheading {
   font-weight: 400;
   margin-bottom: 75px;
 }
-@media (min-width: 768px) {
+@media (min-width: 991px) {
   section {
     padding: 150px 0;
   }
@@ -369,7 +380,7 @@ section h3.section-subheading {
 #portfolio * {
   z-index: 2;
 }
-@media (min-width: 767px) {
+@media (min-width: 991px) {
   #portfolio .portfolio-item {
     margin: 0 0 30px;
   }
@@ -470,7 +481,7 @@ section h3.section-subheading {
 .timeline .timeline-body > ul {
   margin-bottom: 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 991px) {
   .timeline:before {
     left: 50%;
   }

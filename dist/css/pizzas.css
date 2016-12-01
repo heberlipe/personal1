@@ -44,9 +44,11 @@
   margin: 0 auto;
   background-color: white;
   text-align: center;
-  padding: 25px;
+  padding: 10px;
 }
 #pizzas .portfolio-item .portfolio-caption h4 {
+  font-size: 18px;
+  text-align: center;
   text-transform: none;
   margin: 0;
 }
@@ -59,15 +61,16 @@
 #pizzas * {
   z-index: 2;
 }
-@media (min-width: 767px) {
+@media (min-width: 991px) {
   #pizzas .portfolio-item {
     margin: 0 0 30px;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   #pizzas .portfolio-item {
     width: 47.5%;
     display: inline-block;
+    font-size: 90%;
   }
 }
