@@ -1,0 +1,174 @@
+{
+  "pizzas":[
+    {
+      "id":"1",
+      "nombre":"Muzza",
+      "detalle":"",
+      "ingredientes":""
+    },
+    {
+      "id":"2",
+      "nombre":"Anchoas",
+      "detalle":"",
+      "ingredientes":""
+    },
+    {
+      "id":"3",
+      "nombre":"Fugazzeta",
+      "detalle":"",
+      "ingredientes":""
+    },
+    {
+      "id":"4",
+      "nombre":"Napolitana",
+      "detalle":"",
+      "ingredientes":""
+    },
+    {
+      "id":"5",
+      "nombre":"Huevo",
+      "detalle":"",
+      "ingredientes":""
+    },
+    {
+      "id":"6",
+      "nombre":"Calabresa",
+      "detalle":"",
+      "ingredientes":""
+    },
+    {
+      "id":"7",
+      "nombre":"Jamon",
+      "detalle":"",
+      "ingredientes":""
+    },
+    {
+      "id":"8",
+      "nombre":"Jamon y Huevo",
+      "detalle":"",
+      "ingredientes":""
+    },
+    {
+      "id":"9",
+      "nombre":"Jamon y Tomate",
+      "detalle":"",
+      "ingredientes":""
+    },
+    {
+      "id":"10",
+      "nombre":"Jamon, Tomate y Huevo",
+      "detalle":"",
+      "ingredientes":""
+    },
+    {
+      "id":"11",
+      "nombre":"Jamon y Morron",
+      "detalle":"",
+      "ingredientes":""
+    },
+    {
+      "id":"12",
+      "nombre":"Jamon y Anana",
+      "detalle":"",
+      "ingredientes":""
+    },
+    {
+      "id":"13",
+      "nombre":"Jamon, Morron y Huevo",
+      "detalle":"",
+      "ingredientes":""
+    },
+    {
+      "id":"14",
+      "nombre":"Roquefort",
+      "detalle":"",
+      "ingredientes":""
+    },
+    {
+      "id":"15",
+      "nombre":"Provolone",
+      "detalle":"",
+      "ingredientes":""
+    },
+    {
+      "id":"16",
+      "nombre":"Jamon y Palmito",
+      "detalle":"",
+      "ingredientes":""
+    },
+    {
+      "id":"17",
+      "nombre":"Fugazzeta c/ Jamon",
+      "detalle":"",
+      "ingredientes":""
+    },
+    {
+      "id":"18",
+      "nombre":"Fugazzeta c/ Jamon y Morron",
+      "detalle":"",
+      "ingredientes":""
+    },
+    {
+      "id":"19",
+      "nombre":"Fugazzeta c/ Roquefort",
+      "detalle":"",
+      "ingredientes":""
+    },
+    {
+      "id":"20",
+      "nombre":"Jamon, Anana y Morron",
+      "detalle":"",
+      "ingredientes":""
+    },
+    {
+      "id":"21",
+      "nombre":"Jamon y Champignon",
+      "detalle":"",
+      "ingredientes":""
+    },
+    {
+      "id":"22",
+      "nombre":"Champignon, Choclo y Morron",
+      "detalle":"",
+      "ingredientes":""
+    },
+    {
+      "id":"23",
+      "nombre":"Choclo",
+      "detalle":"",
+      "ingredientes":""
+    },
+    {
+      "id":"24",
+      "nombre":"3 Quesos",
+      "detalle":"",
+      "ingredientes":""
+    },
+    {
+      "id":"25",
+      "nombre":"Super Especial",
+      "detalle":"",
+      "ingredientes":""
+    }
+  ],
+  "empanadas":[
+    {
+      "id":"25",
+      "nombre":"Super Especial",
+      "detalle":"",
+      "ingredientes":""
+    },
+    {
+      "id":"25",
+      "nombre":"Super Especial",
+      "detalle":"",
+      "ingredientes":""
+    },
+    {
+      "id":"25",
+      "nombre":"Super Especial",
+      "detalle":"",
+      "ingredientes":""
+    }
+  ]
+}

@@ -1,18 +1,11 @@
 import React,{Component} from 'react';
-import {Item} from "./SubComponents"
+import {PizzasItems} from './Items';
 import {Affix} from './affix.jsx';
 import Scroll from 'react-scroll';
 
-var Link       = Scroll.Link;
-var DirectLink = Scroll.DirectLink;
-var Element    = Scroll.Element;
-var Events     = Scroll.Events;
-var scroll     = Scroll.animateScroll;
-var scrollSpy  = Scroll.scrollSpy;
+var {Link,Events,animateScroll,scrollSpy}  = Scroll;
 
 export class Nav extends Component{
-
-
 
   compomentDidMount(){
     Events.scrollEvent.register('begin', () => {
@@ -26,7 +19,7 @@ export class Nav extends Component{
   }
 
   scrollToTop(){
-    scroll.scrollToTop();
+    animateScroll.scrollToTop();
   };
 
   durationFn(deltaTop){
@@ -205,148 +198,7 @@ export const Pizzas = () => {
             </div>
 
             <div className="row">
-              <Item
-                title="Roundicons"
-                modal="#portfolioModal1"
-                subtitle="asdasd"
-              />
-              <Item
-                title="Roundicons"
-                modal="#portfolioModal1"
-                subtitle="asdasd"
-              />
-              <Item
-                title="Roundicons"
-                modal="#portfolioModal1"
-                subtitle="asdasd"
-              />
-              <Item
-                title="Roundicons"
-                modal="#portfolioModal1"
-                subtitle="asdasd"
-              />
-              <Item
-                title="Roundicons"
-                modal="#portfolioModal1"
-                subtitle="asdasd"
-              />
-              <Item
-                title="Roundicons"
-                modal="#portfolioModal1"
-                subtitle="asdasd"
-              />
-            </div>
-
-            <div className="row">
-              <Item
-                title="Roundicons"
-                modal="#portfolioModal1"
-                subtitle="asdasd"
-              />
-              <Item
-                title="Roundicons"
-                modal="#portfolioModal1"
-                subtitle="asdasd"
-              />
-              <Item
-                title="Roundicons"
-                modal="#portfolioModal1"
-                subtitle="asdasd"
-              />
-              <Item
-                title="Roundicons"
-                modal="#portfolioModal1"
-                subtitle="asdasd"
-              />
-              <Item
-                title="Roundicons"
-                modal="#portfolioModal1"
-                subtitle="asdasd"
-              />
-              <Item
-                title="Roundicons"
-                modal="#portfolioModal1"
-                subtitle="asdasd"
-              />
-            </div>
-
-            <div className="row">
-              <Item
-                title="Roundicons"
-                modal="#portfolioModal1"
-                subtitle="asdasd"
-              />
-              <Item
-                title="Roundicons"
-                modal="#portfolioModal1"
-                subtitle="asdasd"
-              />
-              <Item
-                title="Roundicons"
-                modal="#portfolioModal1"
-                subtitle="asdasd"
-              />
-              <Item
-                title="Roundicons"
-                modal="#portfolioModal1"
-                subtitle="asdasd"
-              />
-              <Item
-                title="Roundicons"
-                modal="#portfolioModal1"
-                subtitle="asdasd"
-              />
-              <Item
-                title="Roundicons"
-                modal="#portfolioModal1"
-                subtitle="asdasd"
-              />
-            </div>
-
-            <div className="row">
-              <Item
-                title="Roundicons"
-                modal="#portfolioModal1"
-                subtitle="asdasd"
-              />
-              <Item
-                title="Roundicons"
-                modal="#portfolioModal1"
-                subtitle="asdasd"
-              />
-              <Item
-                title="Roundicons"
-                modal="#portfolioModal1"
-                subtitle="asdasd"
-              />
-              <Item
-                title="Roundicons"
-                modal="#portfolioModal1"
-                subtitle="asdasd"
-              />
-              <Item
-                title="Roundicons"
-                modal="#portfolioModal1"
-                subtitle="asdasd"
-              />
-              <Item
-                title="Roundicons"
-                modal="#portfolioModal1"
-                subtitle="asdasd"
-              />
-            </div>
-
-            <div className="row">
-              <Item
-                title="Roundicons"
-                modal="#portfolioModal1"
-                subtitle="asdasd"
-              />
-              <Item
-                title="Roundicons"
-                modal="#portfolioModal1"
-                subtitle="asdasd"
-              />
+                <PizzasItems/>
             </div>
         </div>
     </section>

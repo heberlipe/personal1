@@ -45,6 +45,7 @@
   background-color: white;
   text-align: center;
   padding: 10px;
+  height: 75px;
 }
 #pizzas .portfolio-item .portfolio-caption h4 {
   font-size: 18px;
@@ -64,13 +65,14 @@
 @media (min-width: 991px) {
   #pizzas .portfolio-item {
     margin: 0 0 30px;
+    width: 20%;
   }
 }
 
 @media (max-width: 991px) {
   #pizzas .portfolio-item {
     width: 47.5%;
-    display: inline-block;
+    display: inline;
     font-size: 90%;
   }
 }

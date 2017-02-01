@@ -163,7 +163,7 @@ fieldset[disabled] .btn-xl.active {
   background-color: white;
 }
 .navbar-custom {
-  background-color: #222222;
+  background-color: rgba(0,0,0,0.5);
   border-color: transparent;
 }
 .navbar-custom .navbar-brand {

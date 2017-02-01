@@ -11,11 +11,15 @@ module.exports = {
         test: /\.js$|.jsx$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
+      },
+      {
+        test: /\.json$/,
+        loader: 'json'
       }
     ]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx'],
+    extensions: ['', '.js', '.jsx','.json'],
   },
   output: {
     path: __dirname,
