@@ -41,18 +41,24 @@ export class Nav extends Component{
         >
         <div className="container">
             <div className="navbar-header page-scroll">
-                <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span className="sr-only">Toggle navigation</span> Menu <i className="fa fa-bars"></i>
+                <button 
+                    type="button" 
+                    className="navbar-toggle" 
+                    data-toggle="collapse" 
+                    data-target="#bs-example-navbar-collapse-1">
+                        <span className="sr-only">Toggle navigation</span>
+                        <i className="fa fa-bars"></i>
                 </button>
                 <Link
-                  activeClass="active"
-                  className="navbar-brand page-scroll"
-                  to="page-top"
-                  href="#page-top"
-                  spy={true}
-                  smooth={true}
-                  duration={1250}
-                >Titulo</Link>
+                    activeClass="active"
+                    className="navbar-brand page-scroll"
+                    to="page-top"
+                    href="#page-top"
+                    spy={true}
+                    smooth={true}
+                    duration={1250}>
+                        Las Pizzeritas
+                </Link>
             </div>
 
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -60,59 +66,59 @@ export class Nav extends Component{
                     <li className="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <li>
+                    <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <Link
-                          className="page-scroll"
-                          href="#nosotros"
-                          activeClass="active"
-                          spy={true}
-                          to="nosotros"
-                          smooth={true}
-                          duration={1250}
+                            className="page-scroll"
+                            href="#nosotros"
+                            activeClass="active"
+                            spy={true}
+                            to="nosotros"
+                            smooth={true}
+                            duration={1250}
                         >Nosotros</Link>
                     </li>
-                    <li>
+                    <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <Link
-                          className="page-scroll"
-                          href="#pizzas"
-                          activeClass="active"
-                          spy={true}
-                          to="pizzas"
-                          smooth={true}
-                          duration={1250}
+                            className="page-scroll"
+                            href="#pizzas"
+                            activeClass="active"
+                            spy={true}
+                            to="pizzas"
+                            smooth={true}
+                            duration={1250}
                           >Nuestras Pizzas</Link>
                     </li>
-                    <li>
+                    <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <Link
-                          className="page-scroll"
-                          href="#empanadas"
-                          activeClass="active"
-                          spy={true}
-                          to="empanadas"
-                          smooth={true}
-                          duration={1250}
+                            className="page-scroll"
+                            href="#empanadas"
+                            activeClass="active"
+                            spy={true}
+                            to="empanadas"
+                            smooth={true}
+                            duration={1250}
                           >Nuestras Empanadas</Link>
                     </li>
-                    <li>
+                    <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <Link
-                          className="page-scroll"
-                          href="#team"
-                          activeClass="active"
-                          spy={true}
-                          to="team"
-                          smooth={true}
-                          duration={1250}
+                            className="page-scroll"
+                            href="#team"
+                            activeClass="active"
+                            spy={true}
+                            to="team"
+                            smooth={true}
+                            duration={1250}                            
                         >Equipo</Link>
                     </li>
-                    <li>
+                    <li data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <Link
-                          className="page-scroll"
-                          href="#contact"
-                          activeClass="active"
-                          spy={true}
-                          to="contact"
-                          smooth={true}
-                          duration={1250}
+                            className="page-scroll"
+                            href="#contact"
+                            activeClass="active"
+                            spy={true}
+                            to="contact"
+                            smooth={true}
+                            duration={1250}
                         >Contacto</Link>
                     </li>
                 </ul>

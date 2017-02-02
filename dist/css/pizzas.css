@@ -72,7 +72,39 @@
 @media (max-width: 991px) {
   #pizzas .portfolio-item {
     width: 47.5%;
-    display: inline;
     font-size: 90%;
+  }
+}
+
+@media (min-width: 370px) {
+  #pizzas .portfolio-item {
+    display: inline-table;
+  }
+  #pizzas .portfolio-item .portfolio-caption {
+    height: 80px;
+  }
+}
+
+@media (max-width: 370px) {
+  #pizzas .portfolio-item {
+    display: inline-table;
+  }
+  #pizzas .portfolio-item .portfolio-caption {
+    height: 60px;
+  }
+  #pizzas .portfolio-item .portfolio-caption h4{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 322px) {
+  #pizzas .portfolio-item {
+    display: inline;
+  }
+  #pizzas .portfolio-item .portfolio-caption h4{
+    font-size: 18px;
+  }
+  #pizzas .portfolio-item .portfolio-caption {
+    height: 55px;
   }
 }
