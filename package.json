@@ -5,14 +5,13 @@
   "main": "index.js",
   "license": "ISC",
   "scripts": {
-    "dev": "start http://localhost:8080/ & webpack-dev-server --host 0.0.0.0 --hot --inline",
+    "dev": "webpack-dev-server --host 0.0.0.0 --hot --inline & start http://localhost:8080/",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
   },
   "dependencies": {
     "react": "^15.3.2",
-    "react-dom": "^15.3.2",
-    "react-scroll": "^1.4.4"
+    "react-dom": "^15.3.2"
   },
   "devDependencies": {
     "babel-core": "^6.14.0",
@@ -27,6 +26,8 @@
     "jquery": "^1.11.3",
     "json-loader": "^0.5.4",
     "react-hot-loader": "^3.0.0-beta.6",
+    "react-scroll": "^1.4.4",
+    "react-window-resize-listener": "^1.1.0",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.2"
   }

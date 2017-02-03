@@ -2,10 +2,19 @@ import React,{Component} from 'react';
 import {PizzasItems} from './Items';
 import {Affix} from './affix.jsx';
 import Scroll from 'react-scroll';
+import { WindowResizeListener } from 'react-window-resize-listener';
 
 var {Link,Events,animateScroll,scrollSpy}  = Scroll;
 
 export class Nav extends Component{
+
+    constructor(){
+        super();
+        this.state = {
+            'collapsable' : false
+        }
+        this.updateState = this.updateState.bind(this);
+    }
 
   compomentDidMount(){
     Events.scrollEvent.register('begin', () => {
@@ -14,8 +23,22 @@ export class Nav extends Component{
     Events.scrollEvent.register('end', () => {
       console.log("end", arguments);
     });
-
     scrollSpy.update();
+  }
+
+  updateState(){
+      
+      let {collapsable} = this.state;
+      if (document.documentElement.clientWidth < 991 && collapsable != true){
+          this.setState({
+              collapsable : true
+          })
+      }
+      if (document.documentElement.clientWidth > 991 && collapsable != false){
+          this.setState({
+              collapsable : false
+          })
+      }
   }
 
   scrollToTop(){
@@ -32,20 +55,31 @@ export class Nav extends Component{
   };
 
   render(){
+    let {collapsable} = this.state;
     const offset = 51;
+    let id;
+    if(collapsable){
+        id = "bs-example-navbar-collapse-1";
+    }else{
+        id = "h-display-normal";
+    }
     return(
       <Affix
         id="mainNav"
         className="navbar navbar-default navbar-fixed-top navbar-custom"
         offset={offset}
         >
+        <WindowResizeListener onResize={() => {
+            this.updateState();
+        }}/>
         <div className="container">
             <div className="navbar-header page-scroll">
                 <button 
                     type="button" 
                     className="navbar-toggle" 
                     data-toggle="collapse" 
-                    data-target="#bs-example-navbar-collapse-1">
+                    data-target="#bs-example-navbar-collapse-1"
+                    onClick={()=>this.render()}>
                         <span className="sr-only">Toggle navigation</span>
                         <i className="fa fa-bars"></i>
                 </button>
@@ -61,7 +95,7 @@ export class Nav extends Component{
                 </Link>
             </div>
 
-            <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div className="collapse navbar-collapse" id={id}>
                 <ul className="nav navbar-nav navbar-right">
                     <li className="hidden">
                         <a href="#page-top"></a>
