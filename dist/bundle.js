@@ -44,7 +44,8 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(1);
+	__webpack_require__(1);
+	module.exports = __webpack_require__(199);
 
 
 /***/ },
@@ -61,11 +62,11 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _HelloWorld = __webpack_require__(179);
+	var _Principal = __webpack_require__(179);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	_reactDom2.default.render(_react2.default.createElement(_HelloWorld.Principal, { name: 'Diego' }), document.getElementById('root'));
+	_reactDom2.default.render(_react2.default.createElement(_Principal.Principal, null), document.getElementById('root'));
 	;
 
 	var _temp = function () {
@@ -21467,7 +21468,7 @@
 /* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -21480,6 +21481,8 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _Components = __webpack_require__(180);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -21491,246 +21494,27 @@
 	var Principal = exports.Principal = function (_Component) {
 	  _inherits(Principal, _Component);
 
-	  function Principal(props) {
+	  function Principal() {
 	    _classCallCheck(this, Principal);
 
-	    var _this = _possibleConstructorReturn(this, (Principal.__proto__ || Object.getPrototypeOf(Principal)).call(this, props));
-
-	    _this.state = {
-	      "pokemons": [],
-	      "pokemonDatos": {},
-	      "cargando": false,
-	      "mensajeResultado": "",
-	      "criterioDeBusqueda": "id"
-	    };
-	    // searchPokemonById = searchPokemonById.bind(this);
-
-	    _this.drawView = _this.drawView.bind(_this);
-	    _this.actualizarCriterio = _this.actualizarCriterio.bind(_this);
-	    _this.drawOpcionesBusqueda = _this.drawOpcionesBusqueda.bind(_this);
-	    _this.handleStateCargando = _this.handleStateCargando.bind(_this);
-	    _this.handleStatePokemons = _this.handleStatePokemons.bind(_this);
-	    _this.getStateCargando = _this.getStateCargando.bind(_this);
-	    _this.handleStateMensajeResultado = _this.handleStateMensajeResultado.bind(_this);
-	    _this.drawPokemonSeleccionado = _this.drawPokemonSeleccionado.bind(_this);
-	    _this.handlePokemonData = _this.handlePokemonData.bind(_this);
-	    return _this;
+	    return _possibleConstructorReturn(this, (Principal.__proto__ || Object.getPrototypeOf(Principal)).apply(this, arguments));
 	  }
 
 	  _createClass(Principal, [{
-	    key: "handleStateCargando",
-	    value: function handleStateCargando(cargando) {
-	      this.setState({
-	        cargando: cargando
-	      });
-	    }
-	  }, {
-	    key: "handleStatePokemons",
-	    value: function handleStatePokemons(pokemons) {
-	      this.setState({
-	        pokemonDatos: pokemons[0],
-	        pokemons: pokemons
-	      });
-	    }
-	  }, {
-	    key: "getStateCargando",
-	    value: function getStateCargando() {
-	      return this.state.cargando;
-	    }
-	  }, {
-	    key: "handleStateMensajeResultado",
-	    value: function handleStateMensajeResultado(resultado) {
-	      this.setState({
-	        mensajeResultado: resultado
-	      });
-	    }
-	  }, {
-	    key: "drawView",
-	    value: function drawView(pokemons) {
-	      var handlePokemonData = this.handlePokemonData;
-
-
-	      if (pokemons.length > 0) {
-	        return pokemons.map(function (pokemon, index) {
-	          return _react2.default.createElement(
-	            "div",
-	            { key: index },
-	            _react2.default.createElement(PokemonView, { name: pokemon.name,
-	              base_experience: pokemon.base_experience,
-	              image: pokemon.image,
-	              weight: pokemon.weight,
-	              height: pokemon.height,
-	              types: pokemon.types,
-	              handlePokemonData: handlePokemonData
-
-	            })
-	          );
-	        });
-	      }
-	      return _react2.default.createElement("div", null);
-	    }
-	  }, {
-	    key: "actualizarCriterio",
-	    value: function actualizarCriterio(nuevoCriterio) {
-	      console.log("nuevo criterio = " + nuevoCriterio);
-	      this.setState({
-	        criterioDeBusqueda: nuevoCriterio
-	      });
-	    }
-	  }, {
-	    key: "drawOpcionesBusqueda",
-	    value: function drawOpcionesBusqueda() {
-	      var _state = this.state,
-	          criterioDeBusqueda = _state.criterioDeBusqueda,
-	          cargando = _state.cargando,
-	          pokemons = _state.pokemons;
-	      var handleStatePokemons = this.handleStatePokemons,
-	          handleStateCargando = this.handleStateCargando,
-	          getStateCargando = this.getStateCargando,
-	          handleStateMensajeResultado = this.handleStateMensajeResultado;
-
-
-	      if (criterioDeBusqueda == 'id') {
-	        console.log("entro a ID");
-	        return _react2.default.createElement(IngresarNombre, {
-	          handleStateCargando: handleStateCargando,
-	          handleStatePokemons: handleStatePokemons,
-	          getStateCargando: getStateCargando,
-	          handleStateMensajeResultado: handleStateMensajeResultado
-	        });
-	      } else if (criterioDeBusqueda == 'tipo') {
-	        return _react2.default.createElement(IngresarTipos, {
-	          handleStateCargando: handleStateCargando,
-	          handleStatePokemons: handleStatePokemons,
-	          getStateCargando: getStateCargando,
-	          handleStateMensajeResultado: handleStateMensajeResultado
-	        });
-	      }
-	      console.log('entro a criterio busqueda');
-	    }
-	  }, {
-	    key: "drawPokemonSeleccionado",
-	    value: function drawPokemonSeleccionado() {
-	      var _state2 = this.state,
-	          pokemonDatos = _state2.pokemonDatos,
-	          pokemons = _state2.pokemons;
-
-	      console.log("Es distinto de vacio");
-	      if (pokemons.length > 0) {
-	        return _react2.default.createElement(PokemonSeleccionadoView, { pokemon: pokemonDatos });
-	      }
-	    }
-	  }, {
-	    key: "handlePokemonData",
-	    value: function handlePokemonData(newData) {
-	      console.log("Entro a handle Pkmndata");
-	      this.setState({
-	        pokemonDatos: newData });
-	      console.log(newData);
-	    }
-	  }, {
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
-	      var name = this.props.name;
-	      var _state3 = this.state,
-	          pokemons = _state3.pokemons,
-	          pokemonABuscar = _state3.pokemonABuscar,
-	          cargando = _state3.cargando,
-	          mensajeResultado = _state3.mensajeResultado;
-	      var drawPokemonSeleccionado = this.drawPokemonSeleccionado,
-	          drawView = this.drawView,
-	          handleStateMensajeResultado = this.handleStateMensajeResultado,
-	          drawOpcionesBusqueda = this.drawOpcionesBusqueda,
-	          onBuscarAlAzar = this.onBuscarAlAzar,
-	          actualizarPokemonABuscar = this.actualizarPokemonABuscar,
-	          onBuscar = this.onBuscar,
-	          onBuscarPorTipo = this.onBuscarPorTipo,
-	          elegirBusqueda = this.elegirBusqueda,
-	          actualizarCriterio = this.actualizarCriterio;
-
-	      var style = {};
-	      if (!cargando) {
-	        style = {
-	          visibility: 'hidden',
-	          width: '22%'
-	        };
-	      } else {
-	        style = {
-	          visibility: 'visible',
-	          width: '22%'
-	        };
-	      }
-
 	      return _react2.default.createElement(
-	        "div",
-	        null,
-	        _react2.default.createElement(
-	          "nav",
-	          { className: "introduccion" },
-	          _react2.default.createElement(
-	            "div",
-	            { className: "title" },
-	            _react2.default.createElement(
-	              "a",
-	              { href: "" },
-	              _react2.default.createElement("img", {
-	                className: "favicon",
-	                src: "../assets/images/pok.png",
-	                width: "25",
-	                height: "25",
-	                title: "Home",
-	                alt: "Home" }),
-	              "Pokedex"
-	            )
-	          ),
-	          _react2.default.createElement(
-	            "div",
-	            { className: "pesta\xF1as-busqueda" },
-	            "Buscar por:",
-	            _react2.default.createElement("input", { type: "button", name: "boton", title: "Nombre", value: "Nombre", onClick: function onClick() {
-	                return actualizarCriterio('id');
-	              } }),
-	            _react2.default.createElement("input", { type: "button", name: "boton", title: "Tipo", value: "Tipo", onClick: function onClick() {
-	                return actualizarCriterio('tipo');
-	              } })
-	          ),
-	          _react2.default.createElement(
-	            "div",
-	            { className: "contacto-social" },
-	            _react2.default.createElement("i", { className: "fa fa-facebook-square", title: "Facebook" }),
-	            _react2.default.createElement("i", { className: "fa fa-twitter-square", title: "Twitter" }),
-	            _react2.default.createElement("i", { className: "fa fa-instagram", title: "Instagram" }),
-	            _react2.default.createElement("i", { className: "fa fa-money", title: "Help us!" })
-	          )
-	        ),
-	        _react2.default.createElement(
-	          "div",
-	          { className: "contenido-principal" },
-	          drawOpcionesBusqueda(),
-	          _react2.default.createElement(
-	            "div",
-	            { className: "resultado-pokedex" },
-	            _react2.default.createElement(
-	              "div",
-	              { className: "resultado-pokedex-izquierda" },
-	              _react2.default.createElement(
-	                "div",
-	                { className: "pokebolaCarga" },
-	                _react2.default.createElement("img", { src: "http://66.media.tumblr.com/74da2c5713f820807e9aaceb44923bcb/tumblr_oaocdr1gOk1rymyweo1_500.gif", style: style })
-	              ),
-	              drawPokemonSeleccionado()
-	            ),
-	            _react2.default.createElement(
-	              "div",
-	              { className: "resultado-pokedex-derecha" },
-	              _react2.default.createElement(
-	                "div",
-	                { className: "pokemonEncontrados" },
-	                drawView(pokemons)
-	              )
-	            )
-	          )
-	        )
+	        'div',
+	        { id: 'page-top', name: 'page-top', className: 'index' },
+	        _react2.default.createElement(_Components.Nav, null),
+	        _react2.default.createElement(_Components.Header, null),
+	        _react2.default.createElement(_Components.Nosotros, null),
+	        _react2.default.createElement(_Components.Pizzas, null),
+	        _react2.default.createElement(_Components.Empanadas, null),
+	        _react2.default.createElement(_Components.Team, null),
+	        _react2.default.createElement(_Components.Contacto, null),
+	        _react2.default.createElement(_Components.Footer, null),
+	        _react2.default.createElement(_Components.Modals, null)
 	      );
 	    }
 	  }]);
@@ -21745,10 +21529,3230 @@
 	    return;
 	  }
 
-	  __REACT_HOT_LOADER__.register(Principal, "Principal", "C:/Users/Heber/Apps/Personal/personal1/src/HelloWorld.jsx");
+	  __REACT_HOT_LOADER__.register(Principal, 'Principal', 'C:/Users/Heber/Apps/Personal/personal1/src/Principal.jsx');
 	}();
 
 	;
+
+/***/ },
+/* 180 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.Modals = exports.Footer = exports.Contacto = exports.Team = exports.Empanadas = exports.Pizzas = exports.Nosotros = exports.Header = exports.Nav = undefined;
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Items = __webpack_require__(181);
+
+	var _affix = __webpack_require__(183);
+
+	var _reactScroll = __webpack_require__(184);
+
+	var _reactScroll2 = _interopRequireDefault(_reactScroll);
+
+	var _reactWindowResizeListener = __webpack_require__(196);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Link = _reactScroll2.default.Link,
+	    Events = _reactScroll2.default.Events,
+	    animateScroll = _reactScroll2.default.animateScroll,
+	    scrollSpy = _reactScroll2.default.scrollSpy;
+
+	var Nav = exports.Nav = function (_Component) {
+	    _inherits(Nav, _Component);
+
+	    function Nav() {
+	        _classCallCheck(this, Nav);
+
+	        var _this = _possibleConstructorReturn(this, (Nav.__proto__ || Object.getPrototypeOf(Nav)).call(this));
+
+	        _this.state = {
+	            'collapsable': false
+	        };
+	        _this.updateState = _this.updateState.bind(_this);
+	        return _this;
+	    }
+
+	    _createClass(Nav, [{
+	        key: 'compomentDidMount',
+	        value: function compomentDidMount() {
+	            var _arguments = arguments;
+
+	            Events.scrollEvent.register('begin', function () {
+	                console.log("begin", _arguments);
+	            });
+	            Events.scrollEvent.register('end', function () {
+	                console.log("end", _arguments);
+	            });
+	            scrollSpy.update();
+	        }
+	    }, {
+	        key: 'updateState',
+	        value: function updateState() {
+	            var collapsable = this.state.collapsable;
+
+	            if (document.documentElement.clientWidth < 991 && collapsable != true) {
+	                this.setState({
+	                    collapsable: true
+	                });
+	            }
+	            if (document.documentElement.clientWidth > 991 && collapsable != false) {
+	                this.setState({
+	                    collapsable: false
+	                });
+	            }
+	        }
+	    }, {
+	        key: 'scrollToTop',
+	        value: function scrollToTop() {
+	            animateScroll.scrollToTop();
+	        }
+	    }, {
+	        key: 'durationFn',
+	        value: function durationFn(deltaTop) {
+	            return deltaTop;
+	        }
+	    }, {
+	        key: 'componentWillUnmount',
+	        value: function componentWillUnmount() {
+	            Events.scrollEvent.remove('begin');
+	            Events.scrollEvent.remove('end');
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            var _this2 = this;
+
+	            var collapsable = this.state.collapsable;
+
+	            var offset = 51;
+	            var id = void 0;
+	            if (collapsable) {
+	                id = "bs-example-navbar-collapse-1";
+	            } else {
+	                id = "h-display-normal";
+	            }
+	            return _react2.default.createElement(
+	                _affix.Affix,
+	                {
+	                    id: 'mainNav',
+	                    className: 'navbar navbar-default navbar-fixed-top navbar-custom',
+	                    offset: offset
+	                },
+	                _react2.default.createElement(_reactWindowResizeListener.WindowResizeListener, { onResize: function onResize() {
+	                        _this2.updateState();
+	                    } }),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'container' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'navbar-header page-scroll' },
+	                        _react2.default.createElement(
+	                            'button',
+	                            {
+	                                type: 'button',
+	                                className: 'navbar-toggle',
+	                                'data-toggle': 'collapse',
+	                                'data-target': '#bs-example-navbar-collapse-1',
+	                                onClick: function onClick() {
+	                                    return _this2.render();
+	                                } },
+	                            _react2.default.createElement(
+	                                'span',
+	                                { className: 'sr-only' },
+	                                'Toggle navigation'
+	                            ),
+	                            _react2.default.createElement('i', { className: 'fa fa-bars' })
+	                        ),
+	                        _react2.default.createElement(
+	                            Link,
+	                            {
+	                                activeClass: 'active',
+	                                className: 'navbar-brand page-scroll',
+	                                to: 'page-top',
+	                                href: '#page-top',
+	                                spy: true,
+	                                smooth: true,
+	                                duration: 1250 },
+	                            'Las Pizzeritas'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'collapse navbar-collapse', id: id },
+	                        _react2.default.createElement(
+	                            'ul',
+	                            { className: 'nav navbar-nav navbar-right' },
+	                            _react2.default.createElement(
+	                                'li',
+	                                { className: 'hidden' },
+	                                _react2.default.createElement('a', { href: '#page-top' })
+	                            ),
+	                            _react2.default.createElement(
+	                                'li',
+	                                { 'data-toggle': 'collapse', 'data-target': '#bs-example-navbar-collapse-1' },
+	                                _react2.default.createElement(
+	                                    Link,
+	                                    {
+	                                        className: 'page-scroll',
+	                                        href: '#nosotros',
+	                                        activeClass: 'active',
+	                                        spy: true,
+	                                        to: 'nosotros',
+	                                        smooth: true,
+	                                        duration: 1250
+	                                    },
+	                                    'Nosotros'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'li',
+	                                { 'data-toggle': 'collapse', 'data-target': '#bs-example-navbar-collapse-1' },
+	                                _react2.default.createElement(
+	                                    Link,
+	                                    {
+	                                        className: 'page-scroll',
+	                                        href: '#pizzas',
+	                                        activeClass: 'active',
+	                                        spy: true,
+	                                        to: 'pizzas',
+	                                        smooth: true,
+	                                        duration: 1250
+	                                    },
+	                                    'Nuestras Pizzas'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'li',
+	                                { 'data-toggle': 'collapse', 'data-target': '#bs-example-navbar-collapse-1' },
+	                                _react2.default.createElement(
+	                                    Link,
+	                                    {
+	                                        className: 'page-scroll',
+	                                        href: '#empanadas',
+	                                        activeClass: 'active',
+	                                        spy: true,
+	                                        to: 'empanadas',
+	                                        smooth: true,
+	                                        duration: 1250
+	                                    },
+	                                    'Nuestras Empanadas'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'li',
+	                                { 'data-toggle': 'collapse', 'data-target': '#bs-example-navbar-collapse-1' },
+	                                _react2.default.createElement(
+	                                    Link,
+	                                    {
+	                                        className: 'page-scroll',
+	                                        href: '#team',
+	                                        activeClass: 'active',
+	                                        spy: true,
+	                                        to: 'team',
+	                                        smooth: true,
+	                                        duration: 1250
+	                                    },
+	                                    'Equipo'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'li',
+	                                { 'data-toggle': 'collapse', 'data-target': '#bs-example-navbar-collapse-1' },
+	                                _react2.default.createElement(
+	                                    Link,
+	                                    {
+	                                        className: 'page-scroll',
+	                                        href: '#contact',
+	                                        activeClass: 'active',
+	                                        spy: true,
+	                                        to: 'contact',
+	                                        smooth: true,
+	                                        duration: 1250
+	                                    },
+	                                    'Contacto'
+	                                )
+	                            )
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return Nav;
+	}(_react.Component);
+
+	var Header = exports.Header = function Header() {
+	    return _react2.default.createElement(
+	        'header',
+	        { id: 'header-section' },
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'container' },
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'intro-text' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'intro-lead-in' },
+	                    'Bienvenidos'
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'intro-heading' },
+	                    'Alta pagina :D'
+	                ),
+	                _react2.default.createElement(
+	                    Link,
+	                    {
+	                        href: '#nosotros',
+	                        className: 'page-scroll btn btn-xl',
+	                        activeClass: 'active',
+	                        spy: true,
+	                        to: 'nosotros',
+	                        smooth: true,
+	                        duration: 1250
+	                    },
+	                    'Delivery'
+	                )
+	            )
+	        )
+	    );
+	};
+
+	var Nosotros = exports.Nosotros = function Nosotros() {
+	    return _react2.default.createElement(
+	        'section',
+	        { id: 'nosotros', name: 'nosotros' },
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'container' },
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'row' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-lg-12 text-center' },
+	                    _react2.default.createElement(
+	                        'h2',
+	                        { className: 'section-heading' },
+	                        'Nosotros'
+	                    ),
+	                    _react2.default.createElement(
+	                        'h3',
+	                        { className: 'section-subheading text-muted' },
+	                        'Un poco de lo que hacemos...'
+	                    )
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'row text-center' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-md-4' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'fa-stack fa-4x' },
+	                        _react2.default.createElement('i', { className: 'fa fa-circle fa-stack-2x text-primary' }),
+	                        _react2.default.createElement('i', { className: 'fa fa-shopping-cart fa-stack-1x fa-inverse' })
+	                    ),
+	                    _react2.default.createElement(
+	                        'h4',
+	                        { className: 'service-heading' },
+	                        'E-Commerce'
+	                    ),
+	                    _react2.default.createElement(
+	                        'p',
+	                        { className: 'text-muted' },
+	                        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-md-4' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'fa-stack fa-4x' },
+	                        _react2.default.createElement('i', { className: 'fa fa-circle fa-stack-2x text-primary' }),
+	                        _react2.default.createElement('i', { className: 'fa fa-laptop fa-stack-1x fa-inverse' })
+	                    ),
+	                    _react2.default.createElement(
+	                        'h4',
+	                        { className: 'service-heading' },
+	                        'Responsive Design'
+	                    ),
+	                    _react2.default.createElement(
+	                        'p',
+	                        { className: 'text-muted' },
+	                        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-md-4' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'fa-stack fa-4x' },
+	                        _react2.default.createElement('i', { className: 'fa fa-circle fa-stack-2x text-primary' }),
+	                        _react2.default.createElement('i', { className: 'fa fa-lock fa-stack-1x fa-inverse' })
+	                    ),
+	                    _react2.default.createElement(
+	                        'h4',
+	                        { className: 'service-heading' },
+	                        'Web Security'
+	                    ),
+	                    _react2.default.createElement(
+	                        'p',
+	                        { className: 'text-muted' },
+	                        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.'
+	                    )
+	                )
+	            )
+	        )
+	    );
+	};
+
+	var Pizzas = exports.Pizzas = function Pizzas() {
+	    return _react2.default.createElement(
+	        'section',
+	        { id: 'pizzas', name: 'pizzas', className: 'bg-light-gray' },
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'container' },
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'row' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-lg-12 text-center' },
+	                    _react2.default.createElement(
+	                        'h2',
+	                        { className: 'section-heading' },
+	                        'Nuestras Pizzas'
+	                    ),
+	                    _react2.default.createElement(
+	                        'h3',
+	                        { className: 'section-subheading text-muted' },
+	                        'Tenemos los mejores ingredientes para las mejores pizzas'
+	                    )
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'row' },
+	                _react2.default.createElement(_Items.PizzasItems, null)
+	            )
+	        )
+	    );
+	};
+
+	var Empanadas = exports.Empanadas = function Empanadas() {
+	    return _react2.default.createElement(
+	        'section',
+	        { id: 'empanadas', name: 'empanadas' },
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'container' },
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'row' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-lg-12 text-center' },
+	                    _react2.default.createElement(
+	                        'h2',
+	                        { className: 'section-heading' },
+	                        'Nuestras Empanadas'
+	                    ),
+	                    _react2.default.createElement(
+	                        'h3',
+	                        { className: 'section-subheading text-muted' },
+	                        'Lorem ipsum dolor sit amet consectetur.'
+	                    )
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'row' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-md-4 col-sm-4 portfolio-item' },
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: '#portfolioModal1', className: 'portfolio-link', 'data-toggle': 'modal' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'portfolio-hover' },
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'portfolio-hover-content' },
+	                                _react2.default.createElement('i', { className: 'fa fa-plus fa-3x' })
+	                            )
+	                        ),
+	                        _react2.default.createElement('img', { src: 'img/portfolio/roundicons.png', className: 'img-responsive', alt: '' })
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'portfolio-caption' },
+	                        _react2.default.createElement(
+	                            'h4',
+	                            null,
+	                            'Round Icons'
+	                        ),
+	                        _react2.default.createElement(
+	                            'p',
+	                            { className: 'text-muted' },
+	                            'Graphic Design'
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-md-4 col-sm-4 portfolio-item' },
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: '#portfolioModal2', className: 'portfolio-link', 'data-toggle': 'modal' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'portfolio-hover' },
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'portfolio-hover-content' },
+	                                _react2.default.createElement('i', { className: 'fa fa-plus fa-3x' })
+	                            )
+	                        ),
+	                        _react2.default.createElement('img', { src: 'img/portfolio/startup-framework.png', className: 'img-responsive', alt: '' })
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'portfolio-caption' },
+	                        _react2.default.createElement(
+	                            'h4',
+	                            null,
+	                            'Startup'
+	                        ),
+	                        _react2.default.createElement(
+	                            'p',
+	                            { className: 'text-muted' },
+	                            'Website Design'
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-md-4 col-sm-4 portfolio-item' },
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: '#portfolioModal3', className: 'portfolio-link', 'data-toggle': 'modal' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'portfolio-hover' },
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'portfolio-hover-content' },
+	                                _react2.default.createElement('i', { className: 'fa fa-plus fa-3x' })
+	                            )
+	                        ),
+	                        _react2.default.createElement('img', { src: 'img/portfolio/treehouse.png', className: 'img-responsive', alt: '' })
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'portfolio-caption' },
+	                        _react2.default.createElement(
+	                            'h4',
+	                            null,
+	                            'Treehouse'
+	                        ),
+	                        _react2.default.createElement(
+	                            'p',
+	                            { className: 'text-muted' },
+	                            'Website Design'
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-md-4 col-sm-4 portfolio-item' },
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: '#portfolioModal4', className: 'portfolio-link', 'data-toggle': 'modal' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'portfolio-hover' },
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'portfolio-hover-content' },
+	                                _react2.default.createElement('i', { className: 'fa fa-plus fa-3x' })
+	                            )
+	                        ),
+	                        _react2.default.createElement('img', { src: 'img/portfolio/golden.png', className: 'img-responsive', alt: '' })
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'portfolio-caption' },
+	                        _react2.default.createElement(
+	                            'h4',
+	                            null,
+	                            'Golden'
+	                        ),
+	                        _react2.default.createElement(
+	                            'p',
+	                            { className: 'text-muted' },
+	                            'Website Design'
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-md-4 col-sm-4 portfolio-item' },
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: '#portfolioModal5', className: 'portfolio-link', 'data-toggle': 'modal' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'portfolio-hover' },
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'portfolio-hover-content' },
+	                                _react2.default.createElement('i', { className: 'fa fa-plus fa-3x' })
+	                            )
+	                        ),
+	                        _react2.default.createElement('img', { src: 'img/portfolio/escape.png', className: 'img-responsive', alt: '' })
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'portfolio-caption' },
+	                        _react2.default.createElement(
+	                            'h4',
+	                            null,
+	                            'Escape'
+	                        ),
+	                        _react2.default.createElement(
+	                            'p',
+	                            { className: 'text-muted' },
+	                            'Website Design'
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-md-4 col-sm-4 portfolio-item' },
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: '#portfolioModal6', className: 'portfolio-link', 'data-toggle': 'modal' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'portfolio-hover' },
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'portfolio-hover-content' },
+	                                _react2.default.createElement('i', { className: 'fa fa-plus fa-3x' })
+	                            )
+	                        ),
+	                        _react2.default.createElement('img', { src: 'img/portfolio/dreams.png', className: 'img-responsive', alt: '' })
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'portfolio-caption' },
+	                        _react2.default.createElement(
+	                            'h4',
+	                            null,
+	                            'Pizza'
+	                        ),
+	                        _react2.default.createElement(
+	                            'p',
+	                            { className: 'text-muted' },
+	                            'Website Design'
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-md-4 col-sm-4 portfolio-item' },
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: '#portfolioModal4', className: 'portfolio-link', 'data-toggle': 'modal' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'portfolio-hover' },
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'portfolio-hover-content' },
+	                                _react2.default.createElement('i', { className: 'fa fa-plus fa-3x' })
+	                            )
+	                        ),
+	                        _react2.default.createElement('img', { src: 'img/portfolio/golden.png', className: 'img-responsive', alt: '' })
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'portfolio-caption' },
+	                        _react2.default.createElement(
+	                            'h4',
+	                            null,
+	                            'Golden'
+	                        ),
+	                        _react2.default.createElement(
+	                            'p',
+	                            { className: 'text-muted' },
+	                            'Website Design'
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-md-4 col-sm-4 portfolio-item' },
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: '#portfolioModal5', className: 'portfolio-link', 'data-toggle': 'modal' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'portfolio-hover' },
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'portfolio-hover-content' },
+	                                _react2.default.createElement('i', { className: 'fa fa-plus fa-3x' })
+	                            )
+	                        ),
+	                        _react2.default.createElement('img', { src: 'img/portfolio/escape.png', className: 'img-responsive', alt: '' })
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'portfolio-caption' },
+	                        _react2.default.createElement(
+	                            'h4',
+	                            null,
+	                            'Escape'
+	                        ),
+	                        _react2.default.createElement(
+	                            'p',
+	                            { className: 'text-muted' },
+	                            'Website Design'
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-md-4 col-sm-4 portfolio-item' },
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: '#portfolioModal6', className: 'portfolio-link', 'data-toggle': 'modal' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'portfolio-hover' },
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'portfolio-hover-content' },
+	                                _react2.default.createElement('i', { className: 'fa fa-plus fa-3x' })
+	                            )
+	                        ),
+	                        _react2.default.createElement('img', { src: 'img/portfolio/dreams.png', className: 'img-responsive', alt: '' })
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'portfolio-caption' },
+	                        _react2.default.createElement(
+	                            'h4',
+	                            null,
+	                            'Pizza'
+	                        ),
+	                        _react2.default.createElement(
+	                            'p',
+	                            { className: 'text-muted' },
+	                            'Website Design'
+	                        )
+	                    )
+	                )
+	            )
+	        )
+	    );
+	};
+
+	var Team = exports.Team = function Team() {
+	    return _react2.default.createElement(
+	        'section',
+	        { id: 'team', name: 'team', className: 'bg-light-gray' },
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'container' },
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'row' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-lg-12 text-center' },
+	                    _react2.default.createElement(
+	                        'h2',
+	                        { className: 'section-heading' },
+	                        'Our Amazing Team'
+	                    ),
+	                    _react2.default.createElement(
+	                        'h3',
+	                        { className: 'section-subheading text-muted' },
+	                        'Lorem ipsum dolor sit amet consectetur.'
+	                    )
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'row' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-sm-4' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'team-member' },
+	                        _react2.default.createElement('img', { src: 'img/team/1.jpg', className: 'img-responsive img-circle', alt: '' }),
+	                        _react2.default.createElement(
+	                            'h4',
+	                            null,
+	                            'Persona'
+	                        ),
+	                        _react2.default.createElement(
+	                            'p',
+	                            { className: 'text-muted' },
+	                            'Puesto'
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-sm-4' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'team-member' },
+	                        _react2.default.createElement('img', { src: 'img/team/2.jpg', className: 'img-responsive img-circle', alt: '' }),
+	                        _react2.default.createElement(
+	                            'h4',
+	                            null,
+	                            'persona'
+	                        ),
+	                        _react2.default.createElement(
+	                            'p',
+	                            { className: 'text-muted' },
+	                            'puesto'
+	                        )
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-sm-4' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'team-member' },
+	                        _react2.default.createElement('img', { src: 'img/team/3.jpg', className: 'img-responsive img-circle', alt: '' }),
+	                        _react2.default.createElement(
+	                            'h4',
+	                            null,
+	                            'Persona'
+	                        ),
+	                        _react2.default.createElement(
+	                            'p',
+	                            { className: 'text-muted' },
+	                            'puesto'
+	                        )
+	                    )
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'row' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-lg-8 col-lg-offset-2 text-center' },
+	                    _react2.default.createElement(
+	                        'p',
+	                        { className: 'large text-muted' },
+	                        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.'
+	                    )
+	                )
+	            )
+	        )
+	    );
+	};
+
+	var Contacto = exports.Contacto = function Contacto() {
+	    return _react2.default.createElement(
+	        'section',
+	        { id: 'contact', name: 'contact' },
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'container' },
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'row' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-lg-12 text-center' },
+	                    _react2.default.createElement(
+	                        'h2',
+	                        { className: 'section-heading' },
+	                        'Contacto'
+	                    ),
+	                    _react2.default.createElement(
+	                        'h3',
+	                        { className: 'section-subheading text-muted' },
+	                        'Lorem ipsum dolor sit amet consectetur.'
+	                    )
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'row' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-lg-12 text-center' },
+	                    _react2.default.createElement(
+	                        'h1',
+	                        { className: 'telefono' },
+	                        '12345678'
+	                    )
+	                )
+	            )
+	        )
+	    );
+	};
+
+	var Footer = exports.Footer = function Footer() {
+	    return _react2.default.createElement(
+	        'footer',
+	        null,
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'container' },
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'row' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-md-4' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'copyright' },
+	                        'Copyright \xA9 asdasd 2017'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-md-4' },
+	                    _react2.default.createElement(
+	                        'ul',
+	                        { className: 'list-inline social-buttons' },
+	                        _react2.default.createElement('li', null),
+	                        _react2.default.createElement('li', null),
+	                        _react2.default.createElement('li', null)
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-md-4' },
+	                    _react2.default.createElement(
+	                        'ul',
+	                        { className: 'list-inline quicklinks' },
+	                        _react2.default.createElement('li', null),
+	                        _react2.default.createElement('li', null)
+	                    )
+	                )
+	            )
+	        )
+	    );
+	};
+
+	var Modals = exports.Modals = function Modals() {
+	    return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'portfolio-modal modal fade', id: 'portfolioModal1', tabIndex: '-1', role: 'dialog', 'aria-hidden': 'true' },
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'modal-dialog' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'modal-content' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'close-modal', 'data-dismiss': 'modal' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'lr' },
+	                            _react2.default.createElement('div', { className: 'rl' })
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'container' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'row' },
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'col-lg-8 col-lg-offset-2' },
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'modal-body' },
+	                                    _react2.default.createElement(
+	                                        'h2',
+	                                        null,
+	                                        'Project Name'
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'p',
+	                                        { className: 'item-intro text-muted' },
+	                                        'Lorem ipsum dolor sit amet consectetur.'
+	                                    ),
+	                                    _react2.default.createElement('img', { className: 'img-responsive img-centered', src: 'img/portfolio/roundicons-free.png', alt: '' }),
+	                                    _react2.default.createElement(
+	                                        'p',
+	                                        null,
+	                                        'Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!'
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'p',
+	                                        null,
+	                                        _react2.default.createElement(
+	                                            'strong',
+	                                            null,
+	                                            'Want these icons in this portfolio item sample?'
+	                                        ),
+	                                        'You can download 60 of them for free, courtesy of ',
+	                                        _react2.default.createElement(
+	                                            'a',
+	                                            { href: 'https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc' },
+	                                            'RoundIcons.com'
+	                                        ),
+	                                        ', or you can purchase the 1a500 icon set ',
+	                                        _react2.default.createElement(
+	                                            'a',
+	                                            { href: 'https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc' },
+	                                            'here'
+	                                        ),
+	                                        '.'
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'ul',
+	                                        { className: 'list-inline' },
+	                                        _react2.default.createElement(
+	                                            'li',
+	                                            null,
+	                                            'Date: July 2014'
+	                                        ),
+	                                        _react2.default.createElement(
+	                                            'li',
+	                                            null,
+	                                            'Client: Round Icons'
+	                                        ),
+	                                        _react2.default.createElement(
+	                                            'li',
+	                                            null,
+	                                            'Category: Graphic Design'
+	                                        )
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'button',
+	                                        { type: 'button', className: 'btn btn-primary', 'data-dismiss': 'modal' },
+	                                        _react2.default.createElement('i', { className: 'fa fa-times' }),
+	                                        ' Close Project'
+	                                    )
+	                                )
+	                            )
+	                        )
+	                    )
+	                )
+	            )
+	        ),
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'portfolio-modal modal fade', id: 'portfolioModal2', tabIndex: '-1', role: 'dialog', 'aria-hidden': 'true' },
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'modal-dialog' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'modal-content' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'close-modal', 'data-dismiss': 'modal' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'lr' },
+	                            _react2.default.createElement('div', { className: 'rl' })
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'container' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'row' },
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'col-lg-8 col-lg-offset-2' },
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'modal-body' },
+	                                    _react2.default.createElement(
+	                                        'h2',
+	                                        null,
+	                                        'Project Heading'
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'p',
+	                                        { className: 'item-intro text-muted' },
+	                                        'Lorem ipsum dolor sit amet consectetur.'
+	                                    ),
+	                                    _react2.default.createElement('img', { className: 'img-responsive img-centered', src: 'img/portfolio/startup-framework-preview.png', alt: '' }),
+	                                    _react2.default.createElement(
+	                                        'p',
+	                                        null,
+	                                        _react2.default.createElement(
+	                                            'a',
+	                                            { href: 'http://designmodo.com/startup/?u=787' },
+	                                            'Startup '
+	                                        ),
+	                                        ' is a website builder for professionals. Startup Framework contains components and complex blocks (PSD+HTML Bootstrap themes and templates) which can easily be integrated into almost any design. All of these components are made in the same style, and can easily be integrated into projects, allowing you to create hundreds of solutions for your future projects.'
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'p',
+	                                        null,
+	                                        'You can preview Startup ',
+	                                        _react2.default.createElement(
+	                                            'a',
+	                                            { href: 'http://designmodo.com/startup/?u=787' },
+	                                            'here'
+	                                        ),
+	                                        '.'
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'button',
+	                                        { type: 'button', className: 'btn btn-primary', 'data-dismiss': 'modal' },
+	                                        _react2.default.createElement('i', { className: 'fa fa-times' }),
+	                                        ' Close Project'
+	                                    )
+	                                )
+	                            )
+	                        )
+	                    )
+	                )
+	            )
+	        ),
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'portfolio-modal modal fade', id: 'portfolioModal3', tabIndex: '-1', role: 'dialog', 'aria-hidden': 'true' },
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'modal-dialog' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'modal-content' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'close-modal', 'data-dismiss': 'modal' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'lr' },
+	                            _react2.default.createElement('div', { className: 'rl' })
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'container' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'row' },
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'col-lg-8 col-lg-offset-2' },
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'modal-body' },
+	                                    _react2.default.createElement(
+	                                        'h2',
+	                                        null,
+	                                        'Project Name'
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'p',
+	                                        { className: 'item-intro text-muted' },
+	                                        'Lorem ipsum dolor sit amet consectetur.'
+	                                    ),
+	                                    _react2.default.createElement('img', { className: 'img-responsive img-centered', src: 'img/portfolio/treehouse-preview.png', alt: '' }),
+	                                    _react2.default.createElement(
+	                                        'p',
+	                                        null,
+	                                        'Treehouse is a free PSD web template built by ',
+	                                        _react2.default.createElement(
+	                                            'a',
+	                                            { href: 'https://www.behance.net/MathavanJaya' },
+	                                            'Mathavan Jaya'
+	                                        ),
+	                                        '. This is bright and spacious design perfect for people or startup companies looking to showcase their apps or other projects.'
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'p',
+	                                        null,
+	                                        'You can download the PSD template in this portfolio sample item at ',
+	                                        _react2.default.createElement(
+	                                            'a',
+	                                            { href: 'http://freebiesxpress.com/gallery/treehouse-free-psd-web-template/' },
+	                                            'FreebiesXpress.com'
+	                                        ),
+	                                        '.'
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'button',
+	                                        { type: 'button', className: 'btn btn-primary', 'data-dismiss': 'modal' },
+	                                        _react2.default.createElement('i', { className: 'fa fa-times' }),
+	                                        ' Close Project'
+	                                    )
+	                                )
+	                            )
+	                        )
+	                    )
+	                )
+	            )
+	        ),
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'portfolio-modal modal fade', id: 'portfolioModal4', tabIndex: '-1', role: 'dialog', 'aria-hidden': 'true' },
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'modal-dialog' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'modal-content' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'close-modal', 'data-dismiss': 'modal' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'lr' },
+	                            _react2.default.createElement('div', { className: 'rl' })
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'container' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'row' },
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'col-lg-8 col-lg-offset-2' },
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'modal-body' },
+	                                    _react2.default.createElement(
+	                                        'h2',
+	                                        null,
+	                                        'Project Name'
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'p',
+	                                        { className: 'item-intro text-muted' },
+	                                        'Lorem ipsum dolor sit amet consectetur.'
+	                                    ),
+	                                    _react2.default.createElement('img', { className: 'img-responsive img-centered', src: 'img/portfolio/golden-preview.png', alt: '' }),
+	                                    _react2.default.createElement(
+	                                        'p',
+	                                        null,
+	                                        'Start Bootstrap\'s Agency theme is based on Golden, a free PSD website template built by ',
+	                                        _react2.default.createElement(
+	                                            'a',
+	                                            { href: 'https://www.behance.net/MathavanJaya' },
+	                                            'Mathavan Jaya'
+	                                        ),
+	                                        '. Golden is a modern and clean one page web template that was made exclusively for Best PSD Freebies. This template has a great portfolio, timeline, and meet your team sections that can be easily modified to fit your needs.'
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'p',
+	                                        null,
+	                                        'You can download the PSD template in this portfolio sample item at ',
+	                                        _react2.default.createElement(
+	                                            'a',
+	                                            { href: 'http://freebiesxpress.com/gallery/golden-free-one-page-web-template/' },
+	                                            'FreebiesXpress.com'
+	                                        ),
+	                                        '.'
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'button',
+	                                        { type: 'button', className: 'btn btn-primary', 'data-dismiss': 'modal' },
+	                                        _react2.default.createElement('i', { className: 'fa fa-times' }),
+	                                        ' Close Project'
+	                                    )
+	                                )
+	                            )
+	                        )
+	                    )
+	                )
+	            )
+	        ),
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'portfolio-modal modal fade', id: 'portfolioModal5', tabIndex: '-1', role: 'dialog', 'aria-hidden': 'true' },
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'modal-dialog' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'modal-content' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'close-modal', 'data-dismiss': 'modal' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'lr' },
+	                            _react2.default.createElement('div', { className: 'rl' })
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'container' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'row' },
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'col-lg-8 col-lg-offset-2' },
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'modal-body' },
+	                                    _react2.default.createElement(
+	                                        'h2',
+	                                        null,
+	                                        'Project Name'
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'p',
+	                                        { className: 'item-intro text-muted' },
+	                                        'Lorem ipsum dolor sit amet consectetur.'
+	                                    ),
+	                                    _react2.default.createElement('img', { className: 'img-responsive img-centered', src: 'img/portfolio/escape-preview.png', alt: '' }),
+	                                    _react2.default.createElement(
+	                                        'p',
+	                                        null,
+	                                        'Escape is a free PSD web template built by ',
+	                                        _react2.default.createElement(
+	                                            'a',
+	                                            { href: 'https://www.behance.net/MathavanJaya' },
+	                                            'Mathavan Jaya'
+	                                        ),
+	                                        '. Escape is a one page web template that was designed with agencies in mind. This template is ideal for those looking for a simple one page solution to describe your business and offer your services.'
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'p',
+	                                        null,
+	                                        'You can download the PSD template in this portfolio sample item at ',
+	                                        _react2.default.createElement(
+	                                            'a',
+	                                            { href: 'http://freebiesxpress.com/gallery/escape-one-page-psd-web-template/' },
+	                                            'FreebiesXpress.com'
+	                                        ),
+	                                        '.'
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'button',
+	                                        { type: 'button', className: 'btn btn-primary', 'data-dismiss': 'modal' },
+	                                        _react2.default.createElement('i', { className: 'fa fa-times' }),
+	                                        ' Close Project'
+	                                    )
+	                                )
+	                            )
+	                        )
+	                    )
+	                )
+	            )
+	        ),
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'portfolio-modal modal fade', id: 'portfolioModal6', tabIndex: '-1', role: 'dialog', 'aria-hidden': 'true' },
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'modal-dialog' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'modal-content' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'close-modal', 'data-dismiss': 'modal' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'lr' },
+	                            _react2.default.createElement('div', { className: 'rl' })
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'container' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'row' },
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'col-lg-8 col-lg-offset-2' },
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'modal-body' },
+	                                    _react2.default.createElement(
+	                                        'h2',
+	                                        null,
+	                                        'Pizza'
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'p',
+	                                        { className: 'item-intro text-muted' },
+	                                        'Esto es una pizza :o'
+	                                    ),
+	                                    _react2.default.createElement('img', { className: 'img-responsive img-centered', src: 'img/portfolio/dreams-preview.png', alt: '' }),
+	                                    _react2.default.createElement(
+	                                        'p',
+	                                        null,
+	                                        'Esto es un parrafo que tiene que decir que la pizza es muy rica (siempre son ricas)'
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'p',
+	                                        null,
+	                                        'Este es otro parrafo mas cortito... creo...'
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'button',
+	                                        { type: 'button', className: 'btn btn-primary', 'data-dismiss': 'modal' },
+	                                        _react2.default.createElement('i', { className: 'fa fa-times' }),
+	                                        ' Cerrar Pizza'
+	                                    )
+	                                )
+	                            )
+	                        )
+	                    )
+	                )
+	            )
+	        )
+	    );
+	};
+	;
+
+	var _temp = function () {
+	    if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+	        return;
+	    }
+
+	    __REACT_HOT_LOADER__.register(Link, 'Link', 'C:/Users/Heber/Apps/Personal/personal1/src/Components.jsx');
+
+	    __REACT_HOT_LOADER__.register(Events, 'Events', 'C:/Users/Heber/Apps/Personal/personal1/src/Components.jsx');
+
+	    __REACT_HOT_LOADER__.register(animateScroll, 'animateScroll', 'C:/Users/Heber/Apps/Personal/personal1/src/Components.jsx');
+
+	    __REACT_HOT_LOADER__.register(scrollSpy, 'scrollSpy', 'C:/Users/Heber/Apps/Personal/personal1/src/Components.jsx');
+
+	    __REACT_HOT_LOADER__.register(Nav, 'Nav', 'C:/Users/Heber/Apps/Personal/personal1/src/Components.jsx');
+
+	    __REACT_HOT_LOADER__.register(Header, 'Header', 'C:/Users/Heber/Apps/Personal/personal1/src/Components.jsx');
+
+	    __REACT_HOT_LOADER__.register(Nosotros, 'Nosotros', 'C:/Users/Heber/Apps/Personal/personal1/src/Components.jsx');
+
+	    __REACT_HOT_LOADER__.register(Pizzas, 'Pizzas', 'C:/Users/Heber/Apps/Personal/personal1/src/Components.jsx');
+
+	    __REACT_HOT_LOADER__.register(Empanadas, 'Empanadas', 'C:/Users/Heber/Apps/Personal/personal1/src/Components.jsx');
+
+	    __REACT_HOT_LOADER__.register(Team, 'Team', 'C:/Users/Heber/Apps/Personal/personal1/src/Components.jsx');
+
+	    __REACT_HOT_LOADER__.register(Contacto, 'Contacto', 'C:/Users/Heber/Apps/Personal/personal1/src/Components.jsx');
+
+	    __REACT_HOT_LOADER__.register(Footer, 'Footer', 'C:/Users/Heber/Apps/Personal/personal1/src/Components.jsx');
+
+	    __REACT_HOT_LOADER__.register(Modals, 'Modals', 'C:/Users/Heber/Apps/Personal/personal1/src/Components.jsx');
+	}();
+
+	;
+
+/***/ },
+/* 181 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.EmpanadasItems = exports.PizzasItems = undefined;
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _pizzas = __webpack_require__(182);
+
+	var _pizzas2 = _interopRequireDefault(_pizzas);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var PizzasItems = exports.PizzasItems = function PizzasItems() {
+	    var pizzas = _pizzas2.default.pizzas;
+	    var pizzasitems = [];
+	    pizzas.map(function (pizza) {
+	        var imgurl = "img/pizzas/" + pizza.id + ".png";
+	        console.log(imgurl);
+	        pizzasitems.push(_react2.default.createElement(
+	            'div',
+	            { className: 'col-md-2 col-sm-2 portfolio-item' },
+	            _react2.default.createElement(
+	                'a',
+	                { href: '#portfolioModal1', className: 'portfolio-link', 'data-toggle': 'modal' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'portfolio-hover' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'portfolio-hover-content' },
+	                        _react2.default.createElement('i', { className: 'fa fa-plus fa-3x' })
+	                    )
+	                ),
+	                _react2.default.createElement('img', { src: imgurl, className: 'img-responsive', alt: '' })
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'portfolio-caption' },
+	                _react2.default.createElement(
+	                    'h4',
+	                    null,
+	                    pizza.nombre
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    { className: 'text-muted' },
+	                    pizza.detalle
+	                )
+	            )
+	        ));
+	    });
+	    return _react2.default.createElement(
+	        'div',
+	        null,
+	        pizzasitems
+	    );
+	};
+
+	var EmpanadasItems = exports.EmpanadasItems = function EmpanadasItems() {
+	    var empanadas = _pizzas2.default.empanadas;
+	    var empanadasitems = [];
+	    pizzas.map(function (pizza) {
+	        var imgurl = "img/pizzas/" + pizza.id + ".png";
+	        console.log(imgurl);
+	        pizzasitems.push(_react2.default.createElement(
+	            'div',
+	            { className: 'col-md-2 col-sm-2 portfolio-item' },
+	            _react2.default.createElement(
+	                'a',
+	                { href: '#portfolioModal1', className: 'portfolio-link', 'data-toggle': 'modal' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'portfolio-hover' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'portfolio-hover-content' },
+	                        _react2.default.createElement('i', { className: 'fa fa-plus fa-3x' })
+	                    )
+	                ),
+	                _react2.default.createElement('img', { src: imgurl, className: 'img-responsive', alt: '' })
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'portfolio-caption' },
+	                _react2.default.createElement(
+	                    'h4',
+	                    null,
+	                    pizza.nombre
+	                ),
+	                _react2.default.createElement(
+	                    'p',
+	                    { className: 'text-muted' },
+	                    pizza.detalle
+	                )
+	            )
+	        ));
+	    });
+	    return _react2.default.createElement(
+	        'div',
+	        null,
+	        empanadasitems
+	    );
+	};
+	;
+
+	var _temp = function () {
+	    if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+	        return;
+	    }
+
+	    __REACT_HOT_LOADER__.register(PizzasItems, 'PizzasItems', 'C:/Users/Heber/Apps/Personal/personal1/src/Items.jsx');
+
+	    __REACT_HOT_LOADER__.register(EmpanadasItems, 'EmpanadasItems', 'C:/Users/Heber/Apps/Personal/personal1/src/Items.jsx');
+	}();
+
+	;
+
+/***/ },
+/* 182 */
+/***/ function(module, exports) {
+
+	module.exports = {
+		"pizzas": [
+			{
+				"id": "1",
+				"nombre": "Muzza",
+				"detalle": "",
+				"ingredientes": ""
+			},
+			{
+				"id": "2",
+				"nombre": "Anchoas",
+				"detalle": "",
+				"ingredientes": ""
+			},
+			{
+				"id": "3",
+				"nombre": "Fugazzeta",
+				"detalle": "",
+				"ingredientes": ""
+			},
+			{
+				"id": "4",
+				"nombre": "Napolitana",
+				"detalle": "",
+				"ingredientes": ""
+			},
+			{
+				"id": "5",
+				"nombre": "Huevo",
+				"detalle": "",
+				"ingredientes": ""
+			},
+			{
+				"id": "6",
+				"nombre": "Calabresa",
+				"detalle": "",
+				"ingredientes": ""
+			},
+			{
+				"id": "7",
+				"nombre": "Jamon",
+				"detalle": "",
+				"ingredientes": ""
+			},
+			{
+				"id": "8",
+				"nombre": "Jamon y Huevo",
+				"detalle": "",
+				"ingredientes": ""
+			},
+			{
+				"id": "9",
+				"nombre": "Jamon y Tomate",
+				"detalle": "",
+				"ingredientes": ""
+			},
+			{
+				"id": "10",
+				"nombre": "Jamon, Tomate y Huevo",
+				"detalle": "",
+				"ingredientes": ""
+			},
+			{
+				"id": "11",
+				"nombre": "Jamon y Morron",
+				"detalle": "",
+				"ingredientes": ""
+			},
+			{
+				"id": "12",
+				"nombre": "Jamon y Anana",
+				"detalle": "",
+				"ingredientes": ""
+			},
+			{
+				"id": "13",
+				"nombre": "Jamon, Morron y Huevo",
+				"detalle": "",
+				"ingredientes": ""
+			},
+			{
+				"id": "14",
+				"nombre": "Roquefort",
+				"detalle": "",
+				"ingredientes": ""
+			},
+			{
+				"id": "15",
+				"nombre": "Provolone",
+				"detalle": "",
+				"ingredientes": ""
+			},
+			{
+				"id": "16",
+				"nombre": "Jamon y Palmito",
+				"detalle": "",
+				"ingredientes": ""
+			},
+			{
+				"id": "17",
+				"nombre": "Fugazzeta c/ Jamon",
+				"detalle": "",
+				"ingredientes": ""
+			},
+			{
+				"id": "18",
+				"nombre": "Fugazzeta c/ Jamon y Morron",
+				"detalle": "",
+				"ingredientes": ""
+			},
+			{
+				"id": "19",
+				"nombre": "Fugazzeta c/ Roquefort",
+				"detalle": "",
+				"ingredientes": ""
+			},
+			{
+				"id": "20",
+				"nombre": "Jamon, Anana y Morron",
+				"detalle": "",
+				"ingredientes": ""
+			},
+			{
+				"id": "21",
+				"nombre": "Jamon y Champignon",
+				"detalle": "",
+				"ingredientes": ""
+			},
+			{
+				"id": "22",
+				"nombre": "Champignon, Choclo y Morron",
+				"detalle": "",
+				"ingredientes": ""
+			},
+			{
+				"id": "23",
+				"nombre": "Choclo",
+				"detalle": "",
+				"ingredientes": ""
+			},
+			{
+				"id": "24",
+				"nombre": "3 Quesos",
+				"detalle": "",
+				"ingredientes": ""
+			},
+			{
+				"id": "25",
+				"nombre": "Super Especial",
+				"detalle": "",
+				"ingredientes": ""
+			}
+		],
+		"empanadas": [
+			{
+				"id": "25",
+				"nombre": "Super Especial",
+				"detalle": "",
+				"ingredientes": ""
+			},
+			{
+				"id": "25",
+				"nombre": "Super Especial",
+				"detalle": "",
+				"ingredientes": ""
+			},
+			{
+				"id": "25",
+				"nombre": "Super Especial",
+				"detalle": "",
+				"ingredientes": ""
+			}
+		]
+	};
+
+/***/ },
+/* 183 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.Affix = undefined;
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Affix = exports.Affix = function (_Component) {
+	  _inherits(Affix, _Component);
+
+	  function Affix() {
+	    _classCallCheck(this, Affix);
+
+	    var _this = _possibleConstructorReturn(this, (Affix.__proto__ || Object.getPrototypeOf(Affix)).call(this));
+
+	    _this.handleScroll = function () {
+	      return _this.__handleScroll__REACT_HOT_LOADER__.apply(_this, arguments);
+	    };
+
+	    _this.state = {
+	      affix: false
+	    };
+	    return _this;
+	  }
+
+	  _createClass(Affix, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      window.addEventListener('scroll', this.handleScroll);
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      window.removeEventListener('scroll', this.handleScroll);
+	    }
+	  }, {
+	    key: '__handleScroll__REACT_HOT_LOADER__',
+	    value: function __handleScroll__REACT_HOT_LOADER__() {
+	      var affix = this.state.affix;
+	      var offset = this.props.offset;
+	      var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+	      if (!affix && scrollTop >= offset) {
+	        this.setState({
+	          affix: true
+	        });
+	      }
+
+	      if (affix && scrollTop < offset) {
+	        this.setState({
+	          affix: false
+	        });
+	      }
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var affix = this.state.affix ? 'affix' : '';
+
+	      var _props = this.props,
+	          className = _props.className,
+	          props = _objectWithoutProperties(_props, ['className']);
+
+	      return _react2.default.createElement(
+	        'div',
+	        _extends({}, props, { className: (className || '') + ' ' + affix }),
+	        this.props.children
+	      );
+	    }
+	  }]);
+
+	  return Affix;
+	}(_react.Component);
+
+	Affix.propTypes = {
+	  offset: _react.PropTypes.number
+	};
+	Affix.defaultProps = {
+	  offset: 0
+	};
+	;
+
+	var _temp = function () {
+	  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+	    return;
+	  }
+
+	  __REACT_HOT_LOADER__.register(Affix, 'Affix', 'C:/Users/Heber/Apps/Personal/personal1/src/affix.jsx');
+	}();
+
+	;
+
+/***/ },
+/* 184 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports.Link = __webpack_require__(185);
+	exports.Button = __webpack_require__(194);
+	exports.Element = __webpack_require__(195);
+	exports.Helpers = __webpack_require__(186);
+	exports.scroller = __webpack_require__(193);
+	exports.Events = __webpack_require__(191);
+	exports.scrollSpy = __webpack_require__(192);
+	exports.animateScroll = __webpack_require__(187);
+
+
+/***/ },
+/* 185 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(2);
+	var Helpers = __webpack_require__(186);
+
+	var Link = React.createClass({
+	  render: function () {
+	    return React.DOM.a(this.props, this.props.children);
+	  }
+	});
+
+	module.exports = Helpers.Scroll(Link);
+
+
+/***/ },
+/* 186 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(2);
+	var ReactDOM = __webpack_require__(33);
+
+	var animateScroll = __webpack_require__(187);
+	var scrollSpy = __webpack_require__(192);
+	var defaultScroller = __webpack_require__(193);
+	var assign = __webpack_require__(5);
+
+
+	var protoTypes = {
+	  to: React.PropTypes.string.isRequired,
+	  containerId: React.PropTypes.string,
+	  activeClass:React.PropTypes.string,
+	  spy: React.PropTypes.bool,
+	  smooth: React.PropTypes.bool,
+	  offset: React.PropTypes.number,
+	  delay: React.PropTypes.number,
+	  isDynamic: React.PropTypes.bool,
+	  onClick: React.PropTypes.func,
+	  duration: React.PropTypes.oneOfType([React.PropTypes.number, React.PropTypes.func]),
+	  absolute: React.PropTypes.bool,
+	  onSetActive: React.PropTypes.func
+	};
+
+	var Helpers = {
+
+	  Scroll: function (Component, customScroller) {
+
+	    var scroller = customScroller || defaultScroller;
+
+	    return React.createClass({
+
+	      propTypes: protoTypes,
+
+	      getDefaultProps: function() {
+	        return {offset: 0};
+	      },
+
+	      scrollTo : function(to, props) {
+	          scroller.scrollTo(to, props);
+	      },
+
+	      handleClick: function(event) {
+
+	        /*
+	         * give the posibility to override onClick
+	         */
+
+	        if(this.props.onClick) {
+	          this.props.onClick(event);
+	        }
+
+	        /*
+	         * dont bubble the navigation
+	         */
+
+	        if (event.stopPropagation) event.stopPropagation();
+	        if (event.preventDefault) event.preventDefault();
+
+	        /*
+	         * do the magic!
+	         */
+	        this.scrollTo(this.props.to, this.props);
+
+	      },
+
+	      spyHandler: function(y) {
+	        var element = scroller.get(this.props.to);
+	        if (!element) return;
+	        var cords = element.getBoundingClientRect();
+	        var topBound = cords.top + y;
+	        var bottomBound = topBound + cords.height;
+	        var offsetY = y - this.props.offset;
+	        var to = this.props.to;
+	        var isInside = (offsetY >= topBound && offsetY <= bottomBound);
+	        var isOutside = (offsetY < topBound || offsetY > bottomBound);
+	        var activeLink = scroller.getActiveLink();
+
+	        if (isOutside && activeLink === to) {
+	          scroller.setActiveLink(void 0);
+	          this.setState({ active : false });
+
+	        } else if (isInside && activeLink != to) {
+	          scroller.setActiveLink(to);
+	          this.setState({ active : true });
+
+	          if(this.props.onSetActive) {
+	            this.props.onSetActive(to);
+	          }
+
+	          scrollSpy.updateStates();
+	        }
+	      },
+
+	      componentDidMount: function() {
+
+
+
+	        var containerId = this.props.containerId;
+
+	        var scrollSpyContainer = containerId ? document.getElementById(containerId) : document;
+
+	        if(!scrollSpy.isMounted(scrollSpyContainer)) {
+	          scrollSpy.mount(scrollSpyContainer);
+	        }
+
+
+	        if(this.props.spy) {
+	          var to = this.props.to;
+	          var element = null;
+	          var elemTopBound = 0;
+	          var elemBottomBound = 0;
+
+	          this._stateHandler = function() {
+	            if(scroller.getActiveLink() != to) {
+	                this.setState({ active : false });
+	            }
+	          }.bind(this)
+
+	          scrollSpy.addStateHandler(this._stateHandler);
+
+	          this._spyHandler = function(y) {
+
+	            var containerTop = 0;
+	            if(scrollSpyContainer.getBoundingClientRect) {
+	              var containerCords = scrollSpyContainer.getBoundingClientRect();
+	              containerTop = containerCords.top;
+	            }
+
+	            if(!element || this.props.isDynamic) {
+	                element = scroller.get(to);
+	                if(!element){ return;}
+
+	                var cords = element.getBoundingClientRect();
+	                elemTopBound = (cords.top - containerTop + y);
+	                elemBottomBound = elemTopBound + cords.height;
+	            }
+
+
+
+	            var offsetY = y - this.props.offset;
+	            var isInside = (offsetY >= Math.floor(elemTopBound) && offsetY <= Math.floor(elemBottomBound));
+	            var isOutside = (offsetY < Math.floor(elemTopBound) || offsetY > Math.floor(elemBottomBound));
+	            var activeLink = scroller.getActiveLink();
+
+	            if (isOutside && activeLink === to) {
+	              scroller.setActiveLink(void 0);
+	              this.setState({ active : false });
+
+	            } else if (isInside && activeLink != to) {
+	              scroller.setActiveLink(to);
+	              this.setState({ active : true });
+
+	              if(this.props.onSetActive) {
+	                this.props.onSetActive(to);
+	              }
+
+	              scrollSpy.updateStates();
+
+	            }
+	          }.bind(this);
+
+	          scrollSpy.addSpyHandler(this._spyHandler, scrollSpyContainer);
+	        }
+	      },
+	      componentWillUnmount: function() {
+	        scrollSpy.unmount(this._stateHandler, this._spyHandler);
+	      },
+	      render: function() {
+
+	        var className = "";
+	        if(this.state && this.state.active) {
+	          className = ((this.props.className || "") + " " + (this.props.activeClass || "active")).trim();
+	        } else {
+	          className = this.props.className;
+	        }
+
+	        var props = assign({}, this.props);
+
+	        for(var prop in protoTypes) {
+	          if(props.hasOwnProperty(prop)) {
+	            delete props[prop];
+	          }
+	        }
+
+	        props.className = className;
+	        props.onClick = this.handleClick;
+
+	        return React.createElement(Component, props);
+	      }
+	    });
+	  },
+
+
+	  Element: function(Component) {
+	    return React.createClass({
+	      propTypes: {
+	        name: React.PropTypes.string,
+	        id:   React.PropTypes.string
+	      },
+	      componentDidMount: function() {
+	        this.registerElems(this.props.name);
+	      },
+	      componentWillReceiveProps: function(nextProps) {
+	        if (this.props.name !== nextProps.name) {
+	          this.registerElems(nextProps.name);
+	        }
+	      },
+	      componentWillUnmount: function() {
+	        defaultScroller.unregister(this.props.name);
+	      },
+	      registerElems: function(name) {
+	        var domNode = ReactDOM.findDOMNode(this);
+	        defaultScroller.register(name, domNode);
+	      },
+	      render: function() {
+	        return React.createElement(Component, this.props);
+	      }
+	    });
+	  }
+	};
+
+	module.exports = Helpers;
+
+
+/***/ },
+/* 187 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var assign = __webpack_require__(5);
+
+	var smooth = __webpack_require__(188);
+
+	var easing = smooth.defaultEasing;
+
+	var cancelEvents = __webpack_require__(189);
+
+	var events = __webpack_require__(191);
+
+	/*
+	 * Function helper
+	 */
+	var functionWrapper = function(value) {
+	  return typeof value === 'function' ? value : function() { return value; };
+	};
+
+	/*
+	 * Sets the cancel trigger
+	 */
+
+	cancelEvents.register(function() {
+	  __cancel = true;
+	});
+
+	/*
+	 * Wraps window properties to allow server side rendering
+	 */
+	var currentWindowProperties = function() {
+	  if (typeof window !== 'undefined') {
+	    return window.requestAnimationFrame || window.webkitRequestAnimationFrame;
+	  }
+	};
+
+	/*
+	 * Helper function to never extend 60fps on the webpage.
+	 */
+	var requestAnimationFrameHelper = (function () {
+	  return  currentWindowProperties() ||
+	          function (callback, element, delay) {
+	              window.setTimeout(callback, delay || (1000/60), new Date().getTime());
+	          };
+	})();
+
+
+	var __currentPositionY  = 0;
+	var __startPositionY    = 0;
+	var __targetPositionY   = 0;
+	var __progress          = 0;
+	var __duration          = 0;
+	var __cancel            = false;
+
+	var __target;
+	var __containerElement;
+	var __to;
+	var __start;
+	var __deltaTop;
+	var __percent;
+	var __delayTimeout;
+
+
+	var currentPositionY = function() {
+	  if (__containerElement) {
+	        return __containerElement.scrollTop;
+		} else {
+	    var supportPageOffset = window.pageXOffset !== undefined;
+	    var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+	    return supportPageOffset ? window.pageYOffset : isCSS1Compat ?
+	           document.documentElement.scrollTop : document.body.scrollTop;
+	   }
+	};
+
+	var scrollContainerHeight = function() {
+	  if(__containerElement) {
+	    return Math.max(
+	      __containerElement.scrollHeight,
+	      __containerElement.offsetHeight,
+	      __containerElement.clientHeight
+	    );
+	  } else {
+	    var body = document.body;
+	    var html = document.documentElement;
+
+	    return Math.max(
+	      body.scrollHeight,
+	      body.offsetHeight,
+	      html.clientHeight,
+	      html.scrollHeight,
+	      html.offsetHeight
+	    );
+	  }
+	};
+
+	var animateTopScroll = function(timestamp) {
+	  // Cancel on specific events
+	  if(__cancel) { return };
+
+	  __deltaTop = Math.round(__targetPositionY - __startPositionY);
+
+	  if (__start === null) {
+	    __start = timestamp;
+	  }
+
+	  __progress = timestamp - __start;
+
+	  __percent = (__progress >= __duration ? 1 : easing(__progress/__duration));
+
+	  __currentPositionY = __startPositionY + Math.ceil(__deltaTop * __percent);
+
+	  if(__containerElement) {
+	    __containerElement.scrollTop = __currentPositionY;
+	  } else {
+	    window.scrollTo(0, __currentPositionY);
+	  }
+
+	  if(__percent < 1) {
+	    requestAnimationFrameHelper.call(window, animateTopScroll);
+	    return;
+	  }
+
+	  if(events.registered['end']) {
+	    events.registered['end'](__to, __target, __currentPositionY);
+	  }
+
+	};
+
+	var setContainer = function (options) {
+	  if(!options || !options.containerId) {
+	    __containerElement = null;
+	    return;
+	  }
+
+	  __containerElement = document.getElementById(options.containerId);
+	};
+
+	var startAnimateTopScroll = function(y, options, to, target) {
+
+	  window.clearTimeout(__delayTimeout);
+
+	  setContainer(options);
+
+
+	  __start           = null;
+	  __cancel          = false;
+	  __startPositionY  = currentPositionY();
+	  __targetPositionY = options.absolute ? y : y + __startPositionY;
+	  __deltaTop        = Math.round(__targetPositionY - __startPositionY);
+
+	  __duration        = functionWrapper(options.duration)(__deltaTop);
+	  __duration        = isNaN(parseFloat(__duration)) ? 1000 : parseFloat(__duration);
+	  __to              = to;
+	  __target          = target;
+
+	  if(options && options.delay > 0) {
+	    __delayTimeout = window.setTimeout(function animate() {
+	      requestAnimationFrameHelper.call(window, animateTopScroll);
+	    }, options.delay);
+	    return;
+	  }
+
+	  requestAnimationFrameHelper.call(window, animateTopScroll);
+
+	};
+
+	var scrollToTop = function (options) {
+	  startAnimateTopScroll(0, assign(options || {}, { absolute : true }));
+	};
+
+	var scrollTo = function (toY, options) {
+	  startAnimateTopScroll(toY, assign(options || {}, { absolute : true }));
+	};
+
+	var scrollToBottom = function(options) {
+	  setContainer(options);
+	  startAnimateTopScroll(scrollContainerHeight(), assign(options || {}, { absolute : true }));
+	};
+
+	var scrollMore = function(toY, options) {
+	  setContainer(options);
+	  startAnimateTopScroll(currentPositionY() + toY, assign(options || {}, { absolute : true }));
+	};
+
+	module.exports = {
+	  animateTopScroll: startAnimateTopScroll,
+	  scrollToTop: scrollToTop,
+	  scrollToBottom: scrollToBottom,
+	  scrollTo: scrollTo,
+	  scrollMore: scrollMore,
+	};
+
+
+/***/ },
+/* 188 */
+/***/ function(module, exports) {
+
+	module.exports = {
+	 /*
+	  * https://github.com/oblador/angular-scroll (duScrollDefaultEasing)
+	  */
+	  defaultEasing : function (x) {
+	    'use strict';
+
+	    if(x < 0.5) {
+	      return Math.pow(x*2, 2)/2;
+	    }
+	    return 1-Math.pow((1-x)*2, 2)/2;
+	  }
+	}
+
+/***/ },
+/* 189 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var addPassiveEventListener = __webpack_require__(190);
+
+	var events = ['mousedown', 'mousewheel', 'touchmove', 'keydown']
+
+	module.exports = {
+		register : function(cancelEvent) {
+			if (typeof document === 'undefined') {
+				return;
+			}
+
+			for(var i = 0; i < events.length; i = i + 1) {
+				addPassiveEventListener(document, events[i], cancelEvent);
+			}
+		}
+	};
+
+
+/***/ },
+/* 190 */
+/***/ function(module, exports) {
+
+	/*
+	 * Tell the browser that the event listener won't prevent a scroll.
+	 * Allowing the browser to continue scrolling without having to
+	 * to wait for the listener to return.
+	 */
+	var addPassiveEventListener = function(target, eventName, listener) {
+	    var supportsPassiveOption = (function(){
+	        var supportsPassiveOption = false;
+	        try {
+	            var opts = Object.defineProperty({}, 'passive', {
+	                get: function() {
+	                    supportsPassiveOption = true;
+	                }
+	            });
+	            window.addEventListener('test', null, opts);
+	        } catch (e) {}
+	        return supportsPassiveOption;
+	    })();
+
+	    target.addEventListener(eventName, listener, supportsPassiveOption ? {passive: true} : false);
+	};
+
+	module.exports = addPassiveEventListener;
+
+
+/***/ },
+/* 191 */
+/***/ function(module, exports) {
+
+	
+	var Events = {
+		registered : {},
+		scrollEvent : {
+			register: function(evtName, callback) {
+				Events.registered[evtName] = callback;
+			},
+			remove: function(evtName) {
+				Events.registered[evtName] = null;
+			}
+		}
+	};
+
+	module.exports = Events;
+
+/***/ },
+/* 192 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var addPassiveEventListener = __webpack_require__(190);
+
+	var eventThrottler = function(eventHandler) {
+	  var eventHandlerTimeout;
+	  return function(event) {
+	    // ignore events as long as an eventHandler execution is in the queue
+	    if ( !eventHandlerTimeout ) {
+	      eventHandlerTimeout = setTimeout(function() {
+	        eventHandlerTimeout = null;
+	        eventHandler(event);
+	        // The eventHandler will execute at a rate of 15fps
+	      }, 66);
+	    }
+	  };
+	};
+
+	var scrollSpy = {
+
+	  spyCallbacks: [],
+	  spySetState: [],
+	  scrollSpyContainers: [],
+
+	  mount: function (scrollSpyContainer) {
+	    var t = this;
+	    if (scrollSpyContainer) {
+	      var eventHandler = eventThrottler(function(event) {
+	        t.scrollHandler(scrollSpyContainer);
+	      });
+	      this.scrollSpyContainers.push(scrollSpyContainer);
+	      addPassiveEventListener(scrollSpyContainer, 'scroll', eventHandler);
+	    }
+	  },
+
+	  isMounted: function (scrollSpyContainer) {
+	    return this.scrollSpyContainers.indexOf(scrollSpyContainer) !== -1;
+	  },
+
+	  currentPositionY: function (scrollSpyContainer) {
+	    if(scrollSpyContainer === document) {
+	      var supportPageOffset = window.pageXOffset !== undefined;
+	      var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+	      return supportPageOffset ? window.pageYOffset : isCSS1Compat ?
+	      document.documentElement.scrollTop : document.body.scrollTop;
+	    } else {
+	      return scrollSpyContainer.scrollTop;
+	    }
+	  },
+
+	  scrollHandler: function (scrollSpyContainer) {
+	    var callbacks = this.scrollSpyContainers[this.scrollSpyContainers.indexOf(scrollSpyContainer)].spyCallbacks;
+	    if (callbacks) {
+	      for(var i = 0; i < callbacks.length; i++) {
+	        var position =this.currentPositionY(scrollSpyContainer);
+	        callbacks[i](this.currentPositionY(scrollSpyContainer));
+	      }
+	    }
+	  },
+
+	  addStateHandler: function(handler){
+	    this.spySetState.push(handler);
+	  },
+
+	  addSpyHandler: function(handler, scrollSpyContainer) {
+	    var container = this.scrollSpyContainers[this.scrollSpyContainers.indexOf(scrollSpyContainer)];
+	    if(!container.spyCallbacks) {
+	      container.spyCallbacks = [];
+	    }
+	    container.spyCallbacks.push(handler);
+	  },
+
+	  updateStates: function(){
+	    var length = this.spySetState.length;
+
+	    for(var i = 0; i < length; i++) {
+	      this.spySetState[i]();
+	    }
+	  },
+
+	  unmount: function (stateHandler, spyHandler) {
+	    for (var i = 0; i < this.scrollSpyContainers.length; i++) {
+	      var callbacks = this.scrollSpyContainers[i].spyCallbacks;
+	      if(callbacks && callbacks.length) {
+	        callbacks.splice(callbacks.indexOf(spyHandler), 1);
+	      }
+	    }
+
+	    if(this.spySetState && this.spySetState.length) {
+	      this.spySetState.splice(this.spySetState.indexOf(stateHandler), 1);
+	    }
+
+	    document.removeEventListener('scroll', this.scrollHandler);
+	  },
+
+	  update: function() {
+	    for (var i = 0; i < this.scrollSpyContainers.length; i++) {
+	      this.scrollHandler(this.scrollSpyContainers[i]);
+	    }
+	  }
+	}
+
+	module.exports = scrollSpy;
+
+
+/***/ },
+/* 193 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var assign = __webpack_require__(5);
+
+	var animateScroll = __webpack_require__(187);
+	var events = __webpack_require__(191);
+
+	var __mapped = {};
+	var __activeLink;
+
+	module.exports = {
+
+	  unmount: function() {
+	    __mapped = {};
+	  },
+
+	  register: function(name, element){
+	    __mapped[name] = element;
+	  },
+
+	  unregister: function(name) {
+	    delete __mapped[name];
+	  },
+
+	  get: function(name) {
+	    return __mapped[name] || document.getElementById(name);
+	  },
+
+	  setActiveLink: function(link) {
+	    __activeLink = link;
+	  },
+
+	  getActiveLink: function() {
+	    return __activeLink;
+	  },
+
+	  scrollTo: function(to, props) {
+
+	     /*
+	     * get the mapped DOM element
+	     */
+
+	      var target = this.get(to);
+
+	      if(!target) {
+	        console.warn("target Element not found");
+	        return;
+	      }
+
+	      props = assign({}, props, { absolute : false });
+
+
+	      if(events.registered['begin']) {
+	        events.registered['begin'](to, target);
+	      }
+
+	      var containerId = props.containerId;
+	      var containerElement = containerId ? document.getElementById(containerId) : null;
+
+	      var scrollOffset;
+
+	      if(containerId && containerElement) {
+	        props.absolute = true;
+	        if(containerElement !== target.offsetParent) {
+	          if(!containerElement.contains(target)) {
+	            throw new Error('Container with ID ' + containerId + ' is not a parent of target ' + to);
+	          } else {
+	            throw new Error('Container with ID ' + containerId + ' is not a positioned element');
+	          }
+	        }
+
+	        scrollOffset = target.offsetTop;
+	      } else {
+	        var coordinates = target.getBoundingClientRect();
+	        scrollOffset = coordinates.top;
+	      }
+
+	      scrollOffset += (props.offset || 0);
+
+
+	      /*
+	       * if animate is not provided just scroll into the view
+	       */
+	      if(!props.smooth) {
+	        if(containerId && containerElement) {
+	          containerElement.scrollTop = scrollOffset;
+	        } else {
+	          // window.scrollTo accepts only absolute values so body rectangle needs to be subtracted
+	          var bodyRect = document.body.getBoundingClientRect();
+	          window.scrollTo(0, scrollOffset - bodyRect.top);
+	        }
+
+	        if(events.registered['end']) {
+	          events.registered['end'](to, target);
+	        }
+
+	        return;
+	      }
+
+	      /*
+	       * Animate scrolling
+	       */
+
+	      animateScroll.animateTopScroll(scrollOffset, props, to, target);
+	  }
+	};
+
+
+/***/ },
+/* 194 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(2);
+	var Helpers = __webpack_require__(186);
+
+	var Button = React.createClass({
+	  render: function () {
+	    return React.DOM.input(this.props, this.props.children);
+	  }
+	});
+
+	module.exports = Helpers.Scroll(Button);
+
+
+/***/ },
+/* 195 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(2);
+	var Helpers = __webpack_require__(186);
+
+	var Element = React.createClass({
+	  render: function () {
+	    return React.DOM.div(this.props, this.props.children);
+	  }
+	});
+
+	module.exports = Helpers.Element(Element);
+
+
+/***/ },
+/* 196 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * WindowResizeListener
+	 * React component for listening to window resize events
+	 */
+	var React = __webpack_require__(2)
+	var debounce = __webpack_require__(197)
+
+	var WindowResizeListener = React.createClass({
+	  displayName: 'WindowResizeListener',
+
+	  propTypes: {
+	    /**
+	     * Called at least once soon after being mounted
+	     * type WindowSize = { windowWidth: number, windowHeight: number }
+	     * type onResize = (windowSize: WindowSize) => void
+	     */
+	    onResize: React.PropTypes.func.isRequired
+	  },
+
+	  statics: {
+	    /**
+	     * List of resize listeners
+	     * @private
+	     */
+	    _listeners: [],
+
+	    /**
+	     * Maximum debounce wait time
+	     * @public
+	     */
+	    DEBOUNCE_TIME: 100,
+
+	    /**
+	     * Resize handler
+	     * Gets the window size and calls each listener
+	     * @private
+	     */
+	    _onResize: function _onResize () {
+	      var windowWidth = window.innerWidth ||
+	        document.documentElement.clientWidth ||
+	        document.body.clientWidth
+	      var windowHeight = window.innerHeight ||
+	        document.documentElement.clientHeight ||
+	        document.body.clientHeight
+
+	      WindowResizeListener._listeners.forEach(function (listener) {
+	        listener({
+	          windowWidth: windowWidth,
+	          windowHeight: windowHeight
+	        })
+	      })
+	    }
+	  },
+
+	  shouldComponentUpdate: function shouldComponentUpdate (nextProps) {
+	    return nextProps.onResize !== this.props.onResize
+	  },
+
+	  componentDidMount: function componentDidMount () {
+	    // Defer creating _debouncedResize until it's mounted
+	    // This allows users to change DEBOUNCE_TIME if they want
+	    // If there's no listeners, we need to attach the window listener
+	    if (!WindowResizeListener._listeners.length) {
+	      WindowResizeListener._debouncedResize = debounce(
+	        WindowResizeListener._onResize,
+	        WindowResizeListener.DEBOUNCE_TIME
+	      )
+	      window.addEventListener('resize', WindowResizeListener._debouncedResize, false)
+	    }
+	    WindowResizeListener._listeners.push(this.props.onResize)
+	    WindowResizeListener._debouncedResize()
+	  },
+
+	  componentWillUnmount: function componentWillUnmount () {
+	    var idx = WindowResizeListener._listeners.indexOf(this.props.onResize)
+	    WindowResizeListener._listeners.splice(idx, 1)
+	    if (!WindowResizeListener._listeners.length) {
+	      window.removeEventListener('resize', WindowResizeListener._debouncedResize, false)
+	    }
+	  },
+
+	  componentWillReceiveProps: function componentWillReceiveProps (nextProps) {
+	    if (nextProps.onResize !== this.props.onResize) {
+	      var idx = WindowResizeListener._listeners.indexOf(this.props.onResize)
+	      WindowResizeListener._listeners.splice(idx, 1, nextProps.onResize)
+	    }
+	  },
+
+	  render: function resize () {
+	    return null
+	  }
+	})
+
+	exports.default = exports.WindowResizeListener = WindowResizeListener
+
+
+/***/ },
+/* 197 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * lodash 3.1.1 (Custom Build) <https://lodash.com/>
+	 * Build: `lodash modern modularize exports="npm" -o ./`
+	 * Copyright 2012-2015 The Dojo Foundation <http://dojofoundation.org/>
+	 * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+	 * Copyright 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+	 * Available under MIT license <https://lodash.com/license>
+	 */
+	var getNative = __webpack_require__(198);
+
+	/** Used as the `TypeError` message for "Functions" methods. */
+	var FUNC_ERROR_TEXT = 'Expected a function';
+
+	/* Native method references for those with the same name as other `lodash` methods. */
+	var nativeMax = Math.max,
+	    nativeNow = getNative(Date, 'now');
+
+	/**
+	 * Gets the number of milliseconds that have elapsed since the Unix epoch
+	 * (1 January 1970 00:00:00 UTC).
+	 *
+	 * @static
+	 * @memberOf _
+	 * @category Date
+	 * @example
+	 *
+	 * _.defer(function(stamp) {
+	 *   console.log(_.now() - stamp);
+	 * }, _.now());
+	 * // => logs the number of milliseconds it took for the deferred function to be invoked
+	 */
+	var now = nativeNow || function() {
+	  return new Date().getTime();
+	};
+
+	/**
+	 * Creates a debounced function that delays invoking `func` until after `wait`
+	 * milliseconds have elapsed since the last time the debounced function was
+	 * invoked. The debounced function comes with a `cancel` method to cancel
+	 * delayed invocations. Provide an options object to indicate that `func`
+	 * should be invoked on the leading and/or trailing edge of the `wait` timeout.
+	 * Subsequent calls to the debounced function return the result of the last
+	 * `func` invocation.
+	 *
+	 * **Note:** If `leading` and `trailing` options are `true`, `func` is invoked
+	 * on the trailing edge of the timeout only if the the debounced function is
+	 * invoked more than once during the `wait` timeout.
+	 *
+	 * See [David Corbacho's article](http://drupalmotion.com/article/debounce-and-throttle-visual-explanation)
+	 * for details over the differences between `_.debounce` and `_.throttle`.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @category Function
+	 * @param {Function} func The function to debounce.
+	 * @param {number} [wait=0] The number of milliseconds to delay.
+	 * @param {Object} [options] The options object.
+	 * @param {boolean} [options.leading=false] Specify invoking on the leading
+	 *  edge of the timeout.
+	 * @param {number} [options.maxWait] The maximum time `func` is allowed to be
+	 *  delayed before it is invoked.
+	 * @param {boolean} [options.trailing=true] Specify invoking on the trailing
+	 *  edge of the timeout.
+	 * @returns {Function} Returns the new debounced function.
+	 * @example
+	 *
+	 * // avoid costly calculations while the window size is in flux
+	 * jQuery(window).on('resize', _.debounce(calculateLayout, 150));
+	 *
+	 * // invoke `sendMail` when the click event is fired, debouncing subsequent calls
+	 * jQuery('#postbox').on('click', _.debounce(sendMail, 300, {
+	 *   'leading': true,
+	 *   'trailing': false
+	 * }));
+	 *
+	 * // ensure `batchLog` is invoked once after 1 second of debounced calls
+	 * var source = new EventSource('/stream');
+	 * jQuery(source).on('message', _.debounce(batchLog, 250, {
+	 *   'maxWait': 1000
+	 * }));
+	 *
+	 * // cancel a debounced call
+	 * var todoChanges = _.debounce(batchLog, 1000);
+	 * Object.observe(models.todo, todoChanges);
+	 *
+	 * Object.observe(models, function(changes) {
+	 *   if (_.find(changes, { 'user': 'todo', 'type': 'delete'})) {
+	 *     todoChanges.cancel();
+	 *   }
+	 * }, ['delete']);
+	 *
+	 * // ...at some point `models.todo` is changed
+	 * models.todo.completed = true;
+	 *
+	 * // ...before 1 second has passed `models.todo` is deleted
+	 * // which cancels the debounced `todoChanges` call
+	 * delete models.todo;
+	 */
+	function debounce(func, wait, options) {
+	  var args,
+	      maxTimeoutId,
+	      result,
+	      stamp,
+	      thisArg,
+	      timeoutId,
+	      trailingCall,
+	      lastCalled = 0,
+	      maxWait = false,
+	      trailing = true;
+
+	  if (typeof func != 'function') {
+	    throw new TypeError(FUNC_ERROR_TEXT);
+	  }
+	  wait = wait < 0 ? 0 : (+wait || 0);
+	  if (options === true) {
+	    var leading = true;
+	    trailing = false;
+	  } else if (isObject(options)) {
+	    leading = !!options.leading;
+	    maxWait = 'maxWait' in options && nativeMax(+options.maxWait || 0, wait);
+	    trailing = 'trailing' in options ? !!options.trailing : trailing;
+	  }
+
+	  function cancel() {
+	    if (timeoutId) {
+	      clearTimeout(timeoutId);
+	    }
+	    if (maxTimeoutId) {
+	      clearTimeout(maxTimeoutId);
+	    }
+	    lastCalled = 0;
+	    maxTimeoutId = timeoutId = trailingCall = undefined;
+	  }
+
+	  function complete(isCalled, id) {
+	    if (id) {
+	      clearTimeout(id);
+	    }
+	    maxTimeoutId = timeoutId = trailingCall = undefined;
+	    if (isCalled) {
+	      lastCalled = now();
+	      result = func.apply(thisArg, args);
+	      if (!timeoutId && !maxTimeoutId) {
+	        args = thisArg = undefined;
+	      }
+	    }
+	  }
+
+	  function delayed() {
+	    var remaining = wait - (now() - stamp);
+	    if (remaining <= 0 || remaining > wait) {
+	      complete(trailingCall, maxTimeoutId);
+	    } else {
+	      timeoutId = setTimeout(delayed, remaining);
+	    }
+	  }
+
+	  function maxDelayed() {
+	    complete(trailing, timeoutId);
+	  }
+
+	  function debounced() {
+	    args = arguments;
+	    stamp = now();
+	    thisArg = this;
+	    trailingCall = trailing && (timeoutId || !leading);
+
+	    if (maxWait === false) {
+	      var leadingCall = leading && !timeoutId;
+	    } else {
+	      if (!maxTimeoutId && !leading) {
+	        lastCalled = stamp;
+	      }
+	      var remaining = maxWait - (stamp - lastCalled),
+	          isCalled = remaining <= 0 || remaining > maxWait;
+
+	      if (isCalled) {
+	        if (maxTimeoutId) {
+	          maxTimeoutId = clearTimeout(maxTimeoutId);
+	        }
+	        lastCalled = stamp;
+	        result = func.apply(thisArg, args);
+	      }
+	      else if (!maxTimeoutId) {
+	        maxTimeoutId = setTimeout(maxDelayed, remaining);
+	      }
+	    }
+	    if (isCalled && timeoutId) {
+	      timeoutId = clearTimeout(timeoutId);
+	    }
+	    else if (!timeoutId && wait !== maxWait) {
+	      timeoutId = setTimeout(delayed, wait);
+	    }
+	    if (leadingCall) {
+	      isCalled = true;
+	      result = func.apply(thisArg, args);
+	    }
+	    if (isCalled && !timeoutId && !maxTimeoutId) {
+	      args = thisArg = undefined;
+	    }
+	    return result;
+	  }
+	  debounced.cancel = cancel;
+	  return debounced;
+	}
+
+	/**
+	 * Checks if `value` is the [language type](https://es5.github.io/#x8) of `Object`.
+	 * (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+	 *
+	 * @static
+	 * @memberOf _
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+	 * @example
+	 *
+	 * _.isObject({});
+	 * // => true
+	 *
+	 * _.isObject([1, 2, 3]);
+	 * // => true
+	 *
+	 * _.isObject(1);
+	 * // => false
+	 */
+	function isObject(value) {
+	  // Avoid a V8 JIT bug in Chrome 19-20.
+	  // See https://code.google.com/p/v8/issues/detail?id=2291 for more details.
+	  var type = typeof value;
+	  return !!value && (type == 'object' || type == 'function');
+	}
+
+	module.exports = debounce;
+
+
+/***/ },
+/* 198 */
+/***/ function(module, exports) {
+
+	/**
+	 * lodash 3.9.1 (Custom Build) <https://lodash.com/>
+	 * Build: `lodash modern modularize exports="npm" -o ./`
+	 * Copyright 2012-2015 The Dojo Foundation <http://dojofoundation.org/>
+	 * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+	 * Copyright 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+	 * Available under MIT license <https://lodash.com/license>
+	 */
+
+	/** `Object#toString` result references. */
+	var funcTag = '[object Function]';
+
+	/** Used to detect host constructors (Safari > 5). */
+	var reIsHostCtor = /^\[object .+?Constructor\]$/;
+
+	/**
+	 * Checks if `value` is object-like.
+	 *
+	 * @private
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+	 */
+	function isObjectLike(value) {
+	  return !!value && typeof value == 'object';
+	}
+
+	/** Used for native method references. */
+	var objectProto = Object.prototype;
+
+	/** Used to resolve the decompiled source of functions. */
+	var fnToString = Function.prototype.toString;
+
+	/** Used to check objects for own properties. */
+	var hasOwnProperty = objectProto.hasOwnProperty;
+
+	/**
+	 * Used to resolve the [`toStringTag`](http://ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring)
+	 * of values.
+	 */
+	var objToString = objectProto.toString;
+
+	/** Used to detect if a method is native. */
+	var reIsNative = RegExp('^' +
+	  fnToString.call(hasOwnProperty).replace(/[\\^$.*+?()[\]{}|]/g, '\\$&')
+	  .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$'
+	);
+
+	/**
+	 * Gets the native function at `key` of `object`.
+	 *
+	 * @private
+	 * @param {Object} object The object to query.
+	 * @param {string} key The key of the method to get.
+	 * @returns {*} Returns the function if it's native, else `undefined`.
+	 */
+	function getNative(object, key) {
+	  var value = object == null ? undefined : object[key];
+	  return isNative(value) ? value : undefined;
+	}
+
+	/**
+	 * Checks if `value` is classified as a `Function` object.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is correctly classified, else `false`.
+	 * @example
+	 *
+	 * _.isFunction(_);
+	 * // => true
+	 *
+	 * _.isFunction(/abc/);
+	 * // => false
+	 */
+	function isFunction(value) {
+	  // The use of `Object#toString` avoids issues with the `typeof` operator
+	  // in older versions of Chrome and Safari which return 'function' for regexes
+	  // and Safari 8 equivalents which return 'object' for typed array constructors.
+	  return isObject(value) && objToString.call(value) == funcTag;
+	}
+
+	/**
+	 * Checks if `value` is the [language type](https://es5.github.io/#x8) of `Object`.
+	 * (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+	 *
+	 * @static
+	 * @memberOf _
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+	 * @example
+	 *
+	 * _.isObject({});
+	 * // => true
+	 *
+	 * _.isObject([1, 2, 3]);
+	 * // => true
+	 *
+	 * _.isObject(1);
+	 * // => false
+	 */
+	function isObject(value) {
+	  // Avoid a V8 JIT bug in Chrome 19-20.
+	  // See https://code.google.com/p/v8/issues/detail?id=2291 for more details.
+	  var type = typeof value;
+	  return !!value && (type == 'object' || type == 'function');
+	}
+
+	/**
+	 * Checks if `value` is a native function.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is a native function, else `false`.
+	 * @example
+	 *
+	 * _.isNative(Array.prototype.push);
+	 * // => true
+	 *
+	 * _.isNative(_);
+	 * // => false
+	 */
+	function isNative(value) {
+	  if (value == null) {
+	    return false;
+	  }
+	  if (isFunction(value)) {
+	    return reIsNative.test(fnToString.call(value));
+	  }
+	  return isObjectLike(value) && reIsHostCtor.test(value);
+	}
+
+	module.exports = getNative;
+
+
+/***/ },
+/* 199 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	/*globals window __webpack_hash__ */
+	if(false) {
+		var lastData;
+		var upToDate = function upToDate() {
+			return lastData.indexOf(__webpack_hash__) >= 0;
+		};
+		var check = function check() {
+			module.hot.check(true, function(err, updatedModules) {
+				if(err) {
+					if(module.hot.status() in {
+							abort: 1,
+							fail: 1
+						}) {
+						console.warn("[HMR] Cannot apply update. Need to do a full reload!");
+						console.warn("[HMR] " + err.stack || err.message);
+						window.location.reload();
+					} else {
+						console.warn("[HMR] Update failed: " + err.stack || err.message);
+					}
+					return;
+				}
+
+				if(!updatedModules) {
+					console.warn("[HMR] Cannot find update. Need to do a full reload!");
+					console.warn("[HMR] (Probably because of restarting the webpack-dev-server)");
+					window.location.reload();
+					return;
+				}
+
+				if(!upToDate()) {
+					check();
+				}
+
+				require("./log-apply-result")(updatedModules, updatedModules);
+
+				if(upToDate()) {
+					console.log("[HMR] App is up to date.");
+				}
+
+			});
+		};
+		var addEventListener = window.addEventListener ? function(eventName, listener) {
+			window.addEventListener(eventName, listener, false);
+		} : function(eventName, listener) {
+			window.attachEvent("on" + eventName, listener);
+		};
+		addEventListener("message", function(event) {
+			if(typeof event.data === "string" && event.data.indexOf("webpackHotUpdate") === 0) {
+				lastData = event.data;
+				if(!upToDate() && module.hot.status() === "idle") {
+					console.log("[HMR] Checking for updates on the server...");
+					check();
+				}
+			}
+		});
+		console.log("[HMR] Waiting for update signal from WDS...");
+	} else {
+		throw new Error("[HMR] Hot Module Replacement is disabled.");
+	}
+
 
 /***/ }
 /******/ ]);

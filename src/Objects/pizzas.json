@@ -153,20 +153,56 @@
   ],
   "empanadas":[
     {
-      "id":"25",
-      "nombre":"Super Especial",
+      "id":"1",
+      "nombre":"Carne",
       "detalle":"",
       "ingredientes":""
     },
     {
-      "id":"25",
-      "nombre":"Super Especial",
+      "id":"2",
+      "nombre":"Pollo",
       "detalle":"",
       "ingredientes":""
     },
     {
-      "id":"25",
-      "nombre":"Super Especial",
+      "id":"3",
+      "nombre":"Jamon y Queso",
+      "detalle":"",
+      "ingredientes":""
+    },
+    {
+      "id":"4",
+      "nombre":"Roquefort",
+      "detalle":"",
+      "ingredientes":""
+    },
+    {
+      "id":"5",
+      "nombre":"Humita",
+      "detalle":"",
+      "ingredientes":""
+    },
+    {
+      "id":"6",
+      "nombre":"Cebolla y Queso",
+      "detalle":"",
+      "ingredientes":""
+    },
+    {
+      "id":"7",
+      "nombre":"Jamon y Anana",
+      "detalle":"",
+      "ingredientes":""
+    },
+    {
+      "id":"8",
+      "nombre":"Caprese",
+      "detalle":"",
+      "ingredientes":""
+    },
+    {
+      "id":"9",
+      "nombre":"Jamon y Palmitos",
       "detalle":"",
       "ingredientes":""
     }
