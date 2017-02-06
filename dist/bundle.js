@@ -21813,12 +21813,12 @@
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'intro-lead-in' },
-	                    'Bienvenidos'
+	                    'Casa de Pizzas'
 	                ),
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'intro-heading' },
-	                    'Alta pagina :D'
+	                    'Las Pizzeritas'
 	                ),
 	                _react2.default.createElement(
 	                    Link,
@@ -21993,294 +21993,7 @@
 	            _react2.default.createElement(
 	                'div',
 	                { className: 'row' },
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'col-md-4 col-sm-4 portfolio-item' },
-	                    _react2.default.createElement(
-	                        'a',
-	                        { href: '#portfolioModal1', className: 'portfolio-link', 'data-toggle': 'modal' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'portfolio-hover' },
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'portfolio-hover-content' },
-	                                _react2.default.createElement('i', { className: 'fa fa-plus fa-3x' })
-	                            )
-	                        ),
-	                        _react2.default.createElement('img', { src: 'img/portfolio/roundicons.png', className: 'img-responsive', alt: '' })
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'portfolio-caption' },
-	                        _react2.default.createElement(
-	                            'h4',
-	                            null,
-	                            'Round Icons'
-	                        ),
-	                        _react2.default.createElement(
-	                            'p',
-	                            { className: 'text-muted' },
-	                            'Graphic Design'
-	                        )
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'col-md-4 col-sm-4 portfolio-item' },
-	                    _react2.default.createElement(
-	                        'a',
-	                        { href: '#portfolioModal2', className: 'portfolio-link', 'data-toggle': 'modal' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'portfolio-hover' },
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'portfolio-hover-content' },
-	                                _react2.default.createElement('i', { className: 'fa fa-plus fa-3x' })
-	                            )
-	                        ),
-	                        _react2.default.createElement('img', { src: 'img/portfolio/startup-framework.png', className: 'img-responsive', alt: '' })
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'portfolio-caption' },
-	                        _react2.default.createElement(
-	                            'h4',
-	                            null,
-	                            'Startup'
-	                        ),
-	                        _react2.default.createElement(
-	                            'p',
-	                            { className: 'text-muted' },
-	                            'Website Design'
-	                        )
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'col-md-4 col-sm-4 portfolio-item' },
-	                    _react2.default.createElement(
-	                        'a',
-	                        { href: '#portfolioModal3', className: 'portfolio-link', 'data-toggle': 'modal' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'portfolio-hover' },
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'portfolio-hover-content' },
-	                                _react2.default.createElement('i', { className: 'fa fa-plus fa-3x' })
-	                            )
-	                        ),
-	                        _react2.default.createElement('img', { src: 'img/portfolio/treehouse.png', className: 'img-responsive', alt: '' })
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'portfolio-caption' },
-	                        _react2.default.createElement(
-	                            'h4',
-	                            null,
-	                            'Treehouse'
-	                        ),
-	                        _react2.default.createElement(
-	                            'p',
-	                            { className: 'text-muted' },
-	                            'Website Design'
-	                        )
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'col-md-4 col-sm-4 portfolio-item' },
-	                    _react2.default.createElement(
-	                        'a',
-	                        { href: '#portfolioModal4', className: 'portfolio-link', 'data-toggle': 'modal' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'portfolio-hover' },
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'portfolio-hover-content' },
-	                                _react2.default.createElement('i', { className: 'fa fa-plus fa-3x' })
-	                            )
-	                        ),
-	                        _react2.default.createElement('img', { src: 'img/portfolio/golden.png', className: 'img-responsive', alt: '' })
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'portfolio-caption' },
-	                        _react2.default.createElement(
-	                            'h4',
-	                            null,
-	                            'Golden'
-	                        ),
-	                        _react2.default.createElement(
-	                            'p',
-	                            { className: 'text-muted' },
-	                            'Website Design'
-	                        )
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'col-md-4 col-sm-4 portfolio-item' },
-	                    _react2.default.createElement(
-	                        'a',
-	                        { href: '#portfolioModal5', className: 'portfolio-link', 'data-toggle': 'modal' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'portfolio-hover' },
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'portfolio-hover-content' },
-	                                _react2.default.createElement('i', { className: 'fa fa-plus fa-3x' })
-	                            )
-	                        ),
-	                        _react2.default.createElement('img', { src: 'img/portfolio/escape.png', className: 'img-responsive', alt: '' })
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'portfolio-caption' },
-	                        _react2.default.createElement(
-	                            'h4',
-	                            null,
-	                            'Escape'
-	                        ),
-	                        _react2.default.createElement(
-	                            'p',
-	                            { className: 'text-muted' },
-	                            'Website Design'
-	                        )
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'col-md-4 col-sm-4 portfolio-item' },
-	                    _react2.default.createElement(
-	                        'a',
-	                        { href: '#portfolioModal6', className: 'portfolio-link', 'data-toggle': 'modal' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'portfolio-hover' },
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'portfolio-hover-content' },
-	                                _react2.default.createElement('i', { className: 'fa fa-plus fa-3x' })
-	                            )
-	                        ),
-	                        _react2.default.createElement('img', { src: 'img/portfolio/dreams.png', className: 'img-responsive', alt: '' })
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'portfolio-caption' },
-	                        _react2.default.createElement(
-	                            'h4',
-	                            null,
-	                            'Pizza'
-	                        ),
-	                        _react2.default.createElement(
-	                            'p',
-	                            { className: 'text-muted' },
-	                            'Website Design'
-	                        )
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'col-md-4 col-sm-4 portfolio-item' },
-	                    _react2.default.createElement(
-	                        'a',
-	                        { href: '#portfolioModal4', className: 'portfolio-link', 'data-toggle': 'modal' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'portfolio-hover' },
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'portfolio-hover-content' },
-	                                _react2.default.createElement('i', { className: 'fa fa-plus fa-3x' })
-	                            )
-	                        ),
-	                        _react2.default.createElement('img', { src: 'img/portfolio/golden.png', className: 'img-responsive', alt: '' })
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'portfolio-caption' },
-	                        _react2.default.createElement(
-	                            'h4',
-	                            null,
-	                            'Golden'
-	                        ),
-	                        _react2.default.createElement(
-	                            'p',
-	                            { className: 'text-muted' },
-	                            'Website Design'
-	                        )
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'col-md-4 col-sm-4 portfolio-item' },
-	                    _react2.default.createElement(
-	                        'a',
-	                        { href: '#portfolioModal5', className: 'portfolio-link', 'data-toggle': 'modal' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'portfolio-hover' },
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'portfolio-hover-content' },
-	                                _react2.default.createElement('i', { className: 'fa fa-plus fa-3x' })
-	                            )
-	                        ),
-	                        _react2.default.createElement('img', { src: 'img/portfolio/escape.png', className: 'img-responsive', alt: '' })
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'portfolio-caption' },
-	                        _react2.default.createElement(
-	                            'h4',
-	                            null,
-	                            'Escape'
-	                        ),
-	                        _react2.default.createElement(
-	                            'p',
-	                            { className: 'text-muted' },
-	                            'Website Design'
-	                        )
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'col-md-4 col-sm-4 portfolio-item' },
-	                    _react2.default.createElement(
-	                        'a',
-	                        { href: '#portfolioModal6', className: 'portfolio-link', 'data-toggle': 'modal' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'portfolio-hover' },
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'portfolio-hover-content' },
-	                                _react2.default.createElement('i', { className: 'fa fa-plus fa-3x' })
-	                            )
-	                        ),
-	                        _react2.default.createElement('img', { src: 'img/portfolio/dreams.png', className: 'img-responsive', alt: '' })
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'portfolio-caption' },
-	                        _react2.default.createElement(
-	                            'h4',
-	                            null,
-	                            'Pizza'
-	                        ),
-	                        _react2.default.createElement(
-	                            'p',
-	                            { className: 'text-muted' },
-	                            'Website Design'
-	                        )
-	                    )
-	                )
+	                _react2.default.createElement(_Items.EmpanadasItems, null)
 	            )
 	        )
 	    );
@@ -22480,473 +22193,8 @@
 	    return _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(
-	            'div',
-	            { className: 'portfolio-modal modal fade', id: 'portfolioModal1', tabIndex: '-1', role: 'dialog', 'aria-hidden': 'true' },
-	            _react2.default.createElement(
-	                'div',
-	                { className: 'modal-dialog' },
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'modal-content' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'close-modal', 'data-dismiss': 'modal' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'lr' },
-	                            _react2.default.createElement('div', { className: 'rl' })
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'container' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'row' },
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'col-lg-8 col-lg-offset-2' },
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'modal-body' },
-	                                    _react2.default.createElement(
-	                                        'h2',
-	                                        null,
-	                                        'Project Name'
-	                                    ),
-	                                    _react2.default.createElement(
-	                                        'p',
-	                                        { className: 'item-intro text-muted' },
-	                                        'Lorem ipsum dolor sit amet consectetur.'
-	                                    ),
-	                                    _react2.default.createElement('img', { className: 'img-responsive img-centered', src: 'img/portfolio/roundicons-free.png', alt: '' }),
-	                                    _react2.default.createElement(
-	                                        'p',
-	                                        null,
-	                                        'Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!'
-	                                    ),
-	                                    _react2.default.createElement(
-	                                        'p',
-	                                        null,
-	                                        _react2.default.createElement(
-	                                            'strong',
-	                                            null,
-	                                            'Want these icons in this portfolio item sample?'
-	                                        ),
-	                                        'You can download 60 of them for free, courtesy of ',
-	                                        _react2.default.createElement(
-	                                            'a',
-	                                            { href: 'https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc' },
-	                                            'RoundIcons.com'
-	                                        ),
-	                                        ', or you can purchase the 1a500 icon set ',
-	                                        _react2.default.createElement(
-	                                            'a',
-	                                            { href: 'https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc' },
-	                                            'here'
-	                                        ),
-	                                        '.'
-	                                    ),
-	                                    _react2.default.createElement(
-	                                        'ul',
-	                                        { className: 'list-inline' },
-	                                        _react2.default.createElement(
-	                                            'li',
-	                                            null,
-	                                            'Date: July 2014'
-	                                        ),
-	                                        _react2.default.createElement(
-	                                            'li',
-	                                            null,
-	                                            'Client: Round Icons'
-	                                        ),
-	                                        _react2.default.createElement(
-	                                            'li',
-	                                            null,
-	                                            'Category: Graphic Design'
-	                                        )
-	                                    ),
-	                                    _react2.default.createElement(
-	                                        'button',
-	                                        { type: 'button', className: 'btn btn-primary', 'data-dismiss': 'modal' },
-	                                        _react2.default.createElement('i', { className: 'fa fa-times' }),
-	                                        ' Close Project'
-	                                    )
-	                                )
-	                            )
-	                        )
-	                    )
-	                )
-	            )
-	        ),
-	        _react2.default.createElement(
-	            'div',
-	            { className: 'portfolio-modal modal fade', id: 'portfolioModal2', tabIndex: '-1', role: 'dialog', 'aria-hidden': 'true' },
-	            _react2.default.createElement(
-	                'div',
-	                { className: 'modal-dialog' },
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'modal-content' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'close-modal', 'data-dismiss': 'modal' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'lr' },
-	                            _react2.default.createElement('div', { className: 'rl' })
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'container' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'row' },
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'col-lg-8 col-lg-offset-2' },
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'modal-body' },
-	                                    _react2.default.createElement(
-	                                        'h2',
-	                                        null,
-	                                        'Project Heading'
-	                                    ),
-	                                    _react2.default.createElement(
-	                                        'p',
-	                                        { className: 'item-intro text-muted' },
-	                                        'Lorem ipsum dolor sit amet consectetur.'
-	                                    ),
-	                                    _react2.default.createElement('img', { className: 'img-responsive img-centered', src: 'img/portfolio/startup-framework-preview.png', alt: '' }),
-	                                    _react2.default.createElement(
-	                                        'p',
-	                                        null,
-	                                        _react2.default.createElement(
-	                                            'a',
-	                                            { href: 'http://designmodo.com/startup/?u=787' },
-	                                            'Startup '
-	                                        ),
-	                                        ' is a website builder for professionals. Startup Framework contains components and complex blocks (PSD+HTML Bootstrap themes and templates) which can easily be integrated into almost any design. All of these components are made in the same style, and can easily be integrated into projects, allowing you to create hundreds of solutions for your future projects.'
-	                                    ),
-	                                    _react2.default.createElement(
-	                                        'p',
-	                                        null,
-	                                        'You can preview Startup ',
-	                                        _react2.default.createElement(
-	                                            'a',
-	                                            { href: 'http://designmodo.com/startup/?u=787' },
-	                                            'here'
-	                                        ),
-	                                        '.'
-	                                    ),
-	                                    _react2.default.createElement(
-	                                        'button',
-	                                        { type: 'button', className: 'btn btn-primary', 'data-dismiss': 'modal' },
-	                                        _react2.default.createElement('i', { className: 'fa fa-times' }),
-	                                        ' Close Project'
-	                                    )
-	                                )
-	                            )
-	                        )
-	                    )
-	                )
-	            )
-	        ),
-	        _react2.default.createElement(
-	            'div',
-	            { className: 'portfolio-modal modal fade', id: 'portfolioModal3', tabIndex: '-1', role: 'dialog', 'aria-hidden': 'true' },
-	            _react2.default.createElement(
-	                'div',
-	                { className: 'modal-dialog' },
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'modal-content' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'close-modal', 'data-dismiss': 'modal' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'lr' },
-	                            _react2.default.createElement('div', { className: 'rl' })
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'container' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'row' },
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'col-lg-8 col-lg-offset-2' },
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'modal-body' },
-	                                    _react2.default.createElement(
-	                                        'h2',
-	                                        null,
-	                                        'Project Name'
-	                                    ),
-	                                    _react2.default.createElement(
-	                                        'p',
-	                                        { className: 'item-intro text-muted' },
-	                                        'Lorem ipsum dolor sit amet consectetur.'
-	                                    ),
-	                                    _react2.default.createElement('img', { className: 'img-responsive img-centered', src: 'img/portfolio/treehouse-preview.png', alt: '' }),
-	                                    _react2.default.createElement(
-	                                        'p',
-	                                        null,
-	                                        'Treehouse is a free PSD web template built by ',
-	                                        _react2.default.createElement(
-	                                            'a',
-	                                            { href: 'https://www.behance.net/MathavanJaya' },
-	                                            'Mathavan Jaya'
-	                                        ),
-	                                        '. This is bright and spacious design perfect for people or startup companies looking to showcase their apps or other projects.'
-	                                    ),
-	                                    _react2.default.createElement(
-	                                        'p',
-	                                        null,
-	                                        'You can download the PSD template in this portfolio sample item at ',
-	                                        _react2.default.createElement(
-	                                            'a',
-	                                            { href: 'http://freebiesxpress.com/gallery/treehouse-free-psd-web-template/' },
-	                                            'FreebiesXpress.com'
-	                                        ),
-	                                        '.'
-	                                    ),
-	                                    _react2.default.createElement(
-	                                        'button',
-	                                        { type: 'button', className: 'btn btn-primary', 'data-dismiss': 'modal' },
-	                                        _react2.default.createElement('i', { className: 'fa fa-times' }),
-	                                        ' Close Project'
-	                                    )
-	                                )
-	                            )
-	                        )
-	                    )
-	                )
-	            )
-	        ),
-	        _react2.default.createElement(
-	            'div',
-	            { className: 'portfolio-modal modal fade', id: 'portfolioModal4', tabIndex: '-1', role: 'dialog', 'aria-hidden': 'true' },
-	            _react2.default.createElement(
-	                'div',
-	                { className: 'modal-dialog' },
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'modal-content' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'close-modal', 'data-dismiss': 'modal' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'lr' },
-	                            _react2.default.createElement('div', { className: 'rl' })
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'container' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'row' },
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'col-lg-8 col-lg-offset-2' },
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'modal-body' },
-	                                    _react2.default.createElement(
-	                                        'h2',
-	                                        null,
-	                                        'Project Name'
-	                                    ),
-	                                    _react2.default.createElement(
-	                                        'p',
-	                                        { className: 'item-intro text-muted' },
-	                                        'Lorem ipsum dolor sit amet consectetur.'
-	                                    ),
-	                                    _react2.default.createElement('img', { className: 'img-responsive img-centered', src: 'img/portfolio/golden-preview.png', alt: '' }),
-	                                    _react2.default.createElement(
-	                                        'p',
-	                                        null,
-	                                        'Start Bootstrap\'s Agency theme is based on Golden, a free PSD website template built by ',
-	                                        _react2.default.createElement(
-	                                            'a',
-	                                            { href: 'https://www.behance.net/MathavanJaya' },
-	                                            'Mathavan Jaya'
-	                                        ),
-	                                        '. Golden is a modern and clean one page web template that was made exclusively for Best PSD Freebies. This template has a great portfolio, timeline, and meet your team sections that can be easily modified to fit your needs.'
-	                                    ),
-	                                    _react2.default.createElement(
-	                                        'p',
-	                                        null,
-	                                        'You can download the PSD template in this portfolio sample item at ',
-	                                        _react2.default.createElement(
-	                                            'a',
-	                                            { href: 'http://freebiesxpress.com/gallery/golden-free-one-page-web-template/' },
-	                                            'FreebiesXpress.com'
-	                                        ),
-	                                        '.'
-	                                    ),
-	                                    _react2.default.createElement(
-	                                        'button',
-	                                        { type: 'button', className: 'btn btn-primary', 'data-dismiss': 'modal' },
-	                                        _react2.default.createElement('i', { className: 'fa fa-times' }),
-	                                        ' Close Project'
-	                                    )
-	                                )
-	                            )
-	                        )
-	                    )
-	                )
-	            )
-	        ),
-	        _react2.default.createElement(
-	            'div',
-	            { className: 'portfolio-modal modal fade', id: 'portfolioModal5', tabIndex: '-1', role: 'dialog', 'aria-hidden': 'true' },
-	            _react2.default.createElement(
-	                'div',
-	                { className: 'modal-dialog' },
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'modal-content' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'close-modal', 'data-dismiss': 'modal' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'lr' },
-	                            _react2.default.createElement('div', { className: 'rl' })
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'container' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'row' },
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'col-lg-8 col-lg-offset-2' },
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'modal-body' },
-	                                    _react2.default.createElement(
-	                                        'h2',
-	                                        null,
-	                                        'Project Name'
-	                                    ),
-	                                    _react2.default.createElement(
-	                                        'p',
-	                                        { className: 'item-intro text-muted' },
-	                                        'Lorem ipsum dolor sit amet consectetur.'
-	                                    ),
-	                                    _react2.default.createElement('img', { className: 'img-responsive img-centered', src: 'img/portfolio/escape-preview.png', alt: '' }),
-	                                    _react2.default.createElement(
-	                                        'p',
-	                                        null,
-	                                        'Escape is a free PSD web template built by ',
-	                                        _react2.default.createElement(
-	                                            'a',
-	                                            { href: 'https://www.behance.net/MathavanJaya' },
-	                                            'Mathavan Jaya'
-	                                        ),
-	                                        '. Escape is a one page web template that was designed with agencies in mind. This template is ideal for those looking for a simple one page solution to describe your business and offer your services.'
-	                                    ),
-	                                    _react2.default.createElement(
-	                                        'p',
-	                                        null,
-	                                        'You can download the PSD template in this portfolio sample item at ',
-	                                        _react2.default.createElement(
-	                                            'a',
-	                                            { href: 'http://freebiesxpress.com/gallery/escape-one-page-psd-web-template/' },
-	                                            'FreebiesXpress.com'
-	                                        ),
-	                                        '.'
-	                                    ),
-	                                    _react2.default.createElement(
-	                                        'button',
-	                                        { type: 'button', className: 'btn btn-primary', 'data-dismiss': 'modal' },
-	                                        _react2.default.createElement('i', { className: 'fa fa-times' }),
-	                                        ' Close Project'
-	                                    )
-	                                )
-	                            )
-	                        )
-	                    )
-	                )
-	            )
-	        ),
-	        _react2.default.createElement(
-	            'div',
-	            { className: 'portfolio-modal modal fade', id: 'portfolioModal6', tabIndex: '-1', role: 'dialog', 'aria-hidden': 'true' },
-	            _react2.default.createElement(
-	                'div',
-	                { className: 'modal-dialog' },
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'modal-content' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'close-modal', 'data-dismiss': 'modal' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'lr' },
-	                            _react2.default.createElement('div', { className: 'rl' })
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'container' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'row' },
-	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'col-lg-8 col-lg-offset-2' },
-	                                _react2.default.createElement(
-	                                    'div',
-	                                    { className: 'modal-body' },
-	                                    _react2.default.createElement(
-	                                        'h2',
-	                                        null,
-	                                        'Pizza'
-	                                    ),
-	                                    _react2.default.createElement(
-	                                        'p',
-	                                        { className: 'item-intro text-muted' },
-	                                        'Esto es una pizza :o'
-	                                    ),
-	                                    _react2.default.createElement('img', { className: 'img-responsive img-centered', src: 'img/portfolio/dreams-preview.png', alt: '' }),
-	                                    _react2.default.createElement(
-	                                        'p',
-	                                        null,
-	                                        'Esto es un parrafo que tiene que decir que la pizza es muy rica (siempre son ricas)'
-	                                    ),
-	                                    _react2.default.createElement(
-	                                        'p',
-	                                        null,
-	                                        'Este es otro parrafo mas cortito... creo...'
-	                                    ),
-	                                    _react2.default.createElement(
-	                                        'button',
-	                                        { type: 'button', className: 'btn btn-primary', 'data-dismiss': 'modal' },
-	                                        _react2.default.createElement('i', { className: 'fa fa-times' }),
-	                                        ' Cerrar Pizza'
-	                                    )
-	                                )
-	                            )
-	                        )
-	                    )
-	                )
-	            )
-	        )
+	        _react2.default.createElement(_Items.PizzasModals, null),
+	        _react2.default.createElement(_Items.EmpanadasModals, null)
 	    );
 	};
 	;
@@ -22994,7 +22242,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.EmpanadasItems = exports.PizzasItems = undefined;
+	exports.EmpanadasModals = exports.PizzasModals = exports.EmpanadasItems = exports.PizzasItems = undefined;
 
 	var _react = __webpack_require__(2);
 
@@ -23011,13 +22259,13 @@
 	    var pizzasitems = [];
 	    pizzas.map(function (pizza) {
 	        var imgurl = "img/pizzas/" + pizza.id + ".png";
-	        console.log(imgurl);
+	        var modal = "#pizza" + pizza.id;
 	        pizzasitems.push(_react2.default.createElement(
 	            'div',
-	            { className: 'col-md-2 col-sm-2 portfolio-item' },
+	            { className: 'col-md-2 col-sm-2 portfolio-item', key: modal },
 	            _react2.default.createElement(
 	                'a',
-	                { href: '#portfolioModal1', className: 'portfolio-link', 'data-toggle': 'modal' },
+	                { href: modal, className: 'portfolio-link', 'data-toggle': 'modal' },
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'portfolio-hover' },
@@ -23055,15 +22303,15 @@
 	var EmpanadasItems = exports.EmpanadasItems = function EmpanadasItems() {
 	    var empanadas = _pizzas2.default.empanadas;
 	    var empanadasitems = [];
-	    pizzas.map(function (pizza) {
-	        var imgurl = "img/pizzas/" + pizza.id + ".png";
-	        console.log(imgurl);
-	        pizzasitems.push(_react2.default.createElement(
+	    empanadas.map(function (empanada) {
+	        var imgurl = "img/empanadas/" + empanada.id + ".png";
+	        var modal = "#empanada" + empanada.id;
+	        empanadasitems.push(_react2.default.createElement(
 	            'div',
-	            { className: 'col-md-2 col-sm-2 portfolio-item' },
+	            { className: 'col-md-4 col-sm-4 portfolio-item', key: modal },
 	            _react2.default.createElement(
 	                'a',
-	                { href: '#portfolioModal1', className: 'portfolio-link', 'data-toggle': 'modal' },
+	                { href: modal, className: 'portfolio-link', 'data-toggle': 'modal' },
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'portfolio-hover' },
@@ -23081,12 +22329,12 @@
 	                _react2.default.createElement(
 	                    'h4',
 	                    null,
-	                    pizza.nombre
+	                    empanada.nombre
 	                ),
 	                _react2.default.createElement(
 	                    'p',
 	                    { className: 'text-muted' },
-	                    pizza.detalle
+	                    empanada.detalle
 	                )
 	            )
 	        ));
@@ -23095,6 +22343,178 @@
 	        'div',
 	        null,
 	        empanadasitems
+	    );
+	};
+
+	var PizzasModals = exports.PizzasModals = function PizzasModals() {
+	    var pizzas = _pizzas2.default.pizzas;
+	    var pizzasModals = [];
+	    pizzas.map(function (pizza) {
+	        var imgurl = "img/pizzas/" + pizza.id + ".png";
+	        var id = "pizza" + pizza.id;
+	        pizzasModals.push(_react2.default.createElement(
+	            'div',
+	            { className: 'portfolio-modal modal fade', key: id, id: id, tabIndex: '-1', role: 'dialog', 'aria-hidden': 'true' },
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'modal-dialog' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'modal-content' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'close-modal', 'data-dismiss': 'modal' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'lr' },
+	                            _react2.default.createElement('div', { className: 'rl' })
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'container' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'row' },
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'col-lg-8 col-lg-offset-2' },
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'modal-body' },
+	                                    _react2.default.createElement(
+	                                        'h2',
+	                                        null,
+	                                        pizza.nombre
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'p',
+	                                        { className: 'item-intro text-muted' },
+	                                        'Descripcion'
+	                                    ),
+	                                    _react2.default.createElement('img', {
+	                                        className: 'img-responsive img-centered',
+	                                        src: imgurl,
+	                                        alt: '' }),
+	                                    _react2.default.createElement(
+	                                        'p',
+	                                        null,
+	                                        'Texto comun!'
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'p',
+	                                        null,
+	                                        _react2.default.createElement(
+	                                            'strong',
+	                                            null,
+	                                            'Texto en negrita :D'
+	                                        ),
+	                                        '... mas Texto'
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'button',
+	                                        { type: 'button', className: 'btn btn-primary', 'data-dismiss': 'modal' },
+	                                        _react2.default.createElement('i', { className: 'fa fa-times' }),
+	                                        'Cerrar'
+	                                    )
+	                                )
+	                            )
+	                        )
+	                    )
+	                )
+	            )
+	        ));
+	    });
+	    return _react2.default.createElement(
+	        'div',
+	        null,
+	        pizzasModals
+	    );
+	};
+
+	var EmpanadasModals = exports.EmpanadasModals = function EmpanadasModals() {
+	    var empanadas = _pizzas2.default.empanadas;
+	    var empanadasModals = [];
+	    empanadas.map(function (empanada) {
+	        var imgurl = "img/empanadas/" + empanada.id + ".png";
+	        var id = "empanada" + empanada.id;
+	        empanadasModals.push(_react2.default.createElement(
+	            'div',
+	            { className: 'portfolio-modal modal fade', key: id, id: id, tabIndex: '-1', role: 'dialog', 'aria-hidden': 'true' },
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'modal-dialog' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'modal-content' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'close-modal', 'data-dismiss': 'modal' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'lr' },
+	                            _react2.default.createElement('div', { className: 'rl' })
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'container' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'row' },
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'col-lg-8 col-lg-offset-2' },
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'modal-body' },
+	                                    _react2.default.createElement(
+	                                        'h2',
+	                                        null,
+	                                        empanada.nombre
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'p',
+	                                        { className: 'item-intro text-muted' },
+	                                        'Descripcion'
+	                                    ),
+	                                    _react2.default.createElement('img', {
+	                                        className: 'img-responsive img-centered',
+	                                        src: imgurl,
+	                                        alt: '' }),
+	                                    _react2.default.createElement(
+	                                        'p',
+	                                        null,
+	                                        'Texto comun!'
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'p',
+	                                        null,
+	                                        _react2.default.createElement(
+	                                            'strong',
+	                                            null,
+	                                            'Texto en negrita :D'
+	                                        ),
+	                                        '... mas Texto'
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'button',
+	                                        { type: 'button', className: 'btn btn-primary', 'data-dismiss': 'modal' },
+	                                        _react2.default.createElement('i', { className: 'fa fa-times' }),
+	                                        'Cerrar'
+	                                    )
+	                                )
+	                            )
+	                        )
+	                    )
+	                )
+	            )
+	        ));
+	    });
+	    return _react2.default.createElement(
+	        'div',
+	        null,
+	        empanadasModals
 	    );
 	};
 	;
@@ -23107,6 +22527,10 @@
 	    __REACT_HOT_LOADER__.register(PizzasItems, 'PizzasItems', 'C:/Users/Heber/Apps/Personal/personal1/src/Items.jsx');
 
 	    __REACT_HOT_LOADER__.register(EmpanadasItems, 'EmpanadasItems', 'C:/Users/Heber/Apps/Personal/personal1/src/Items.jsx');
+
+	    __REACT_HOT_LOADER__.register(PizzasModals, 'PizzasModals', 'C:/Users/Heber/Apps/Personal/personal1/src/Items.jsx');
+
+	    __REACT_HOT_LOADER__.register(EmpanadasModals, 'EmpanadasModals', 'C:/Users/Heber/Apps/Personal/personal1/src/Items.jsx');
 	}();
 
 	;
@@ -23270,20 +22694,56 @@
 		],
 		"empanadas": [
 			{
-				"id": "25",
-				"nombre": "Super Especial",
+				"id": "1",
+				"nombre": "Carne",
 				"detalle": "",
 				"ingredientes": ""
 			},
 			{
-				"id": "25",
-				"nombre": "Super Especial",
+				"id": "2",
+				"nombre": "Pollo",
 				"detalle": "",
 				"ingredientes": ""
 			},
 			{
-				"id": "25",
-				"nombre": "Super Especial",
+				"id": "3",
+				"nombre": "Jamon y Queso",
+				"detalle": "",
+				"ingredientes": ""
+			},
+			{
+				"id": "4",
+				"nombre": "Roquefort",
+				"detalle": "",
+				"ingredientes": ""
+			},
+			{
+				"id": "5",
+				"nombre": "Humita",
+				"detalle": "",
+				"ingredientes": ""
+			},
+			{
+				"id": "6",
+				"nombre": "Cebolla y Queso",
+				"detalle": "",
+				"ingredientes": ""
+			},
+			{
+				"id": "7",
+				"nombre": "Jamon y Anana",
+				"detalle": "",
+				"ingredientes": ""
+			},
+			{
+				"id": "8",
+				"nombre": "Caprese",
+				"detalle": "",
+				"ingredientes": ""
+			},
+			{
+				"id": "9",
+				"nombre": "Jamon y Palmitos",
 				"detalle": "",
 				"ingredientes": ""
 			}

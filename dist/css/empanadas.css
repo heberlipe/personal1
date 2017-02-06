@@ -59,15 +59,48 @@
 #empanadas * {
   z-index: 2;
 }
-@media (min-width: 767px) {
+@media (min-width: 991px) {
   #empanadas .portfolio-item {
     margin: 0 0 30px;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   #empanadas .portfolio-item {
     width: 47.5%;
-    display: inline-block;
+    font-size: 90%;
+  }
+}
+
+@media (min-width: 370px) {
+  #empanadas .portfolio-item {
+    display: inline-table;
+  }
+  #empanadas .portfolio-item .portfolio-caption {
+    height: 80px;
+  }
+}
+
+@media (max-width: 370px) {
+  #empanadas .portfolio-item {
+    display: inline-table;
+  }
+  #empanadas .portfolio-item .portfolio-caption {
+    height: 60px;
+  }
+  #empanadas .portfolio-item .portfolio-caption h4{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 322px) {
+  #empanadas .portfolio-item {
+    display: inline;
+  }
+  #empanadas .portfolio-item .portfolio-caption h4{
+    font-size: 18px;
+  }
+  #empanadas .portfolio-item .portfolio-caption {
+    height: 55px;
   }
 }

@@ -63,6 +63,7 @@ export class Nav extends Component{
     }else{
         id = "h-display-normal";
     }
+                   
     return(
       <Affix
         id="mainNav"
